@@ -1,0 +1,43 @@
+/*
+* Theme Name: Run Rabbit Run
+* Theme URI: http://runrabbitrun.ca;
+* Description: Custom WordPress theme for Run Rabbit Run and Kelly Kirkham.
+* Version: 1.0
+* Author: Allison Tarr
+* Author URI: http://allisontarr.com
+*/
+
+@import 'normalize';
+@import 'typography';
+@import 'navigation';
+@import 'sidebar';
+@import 'comments';
+@import 'footer';
+/*
+====================================
+Default Styling
+====================================
+*/
+
+img {
+	max-width: 100%;
+}
+
+body {
+	color: #333;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.content {
+	float: left;
+	width: 65%;
+	margin-right: 5%;
+}
+
+.full {
+	width: 100%;
+}
