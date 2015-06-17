@@ -1,7 +1,7 @@
 {
-  "name": "theme-hackeryou",
+  "name": "run-rabbit",
   "version": "1.0.0",
-  "description": "A starter HackerYou theme",
+  "description": "A custom WordPress theme",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
