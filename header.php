@@ -20,17 +20,19 @@
 <body <?php body_class(); ?>>
 
 <header>
-  <div class="container">
-    <h1>
-      <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-        <?php bloginfo( 'name' ); ?>
-      </a>
-    </h1>
-
+  <a class="menuIcon" href="#"> ☰ Menu</a>
+    <div class="toggleNav">
     <?php wp_nav_menu( array(
       'container' => false,
       'theme_locations' => 'primary'
     )); ?>
+    </div> <!--/.toggleNav-->
+  <div class="container">
+    <h1>
+      <a class="title" href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
+        <?php bloginfo( 'name' ); ?>
+      </a>
+    </h1>
+
   </div> <!-- /.container -->
 </header><!--/.header-->
-
