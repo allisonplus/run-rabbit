@@ -4,14 +4,18 @@
 <div class="main clearfix">
   <div class="container clearfix">
 
-    <div class="content">
-    		
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt ratione repellat aspernatur necessitatibus a vitae doloremque impedit, dignissimos fuga magni quo adipisci praesentium accusantium officiis, sit ducimus perspiciatis iusto eius. Esse expedita delectus, quis veniam neque officiis necessitatibus cum pariatur mollitia fugit saepe dolorum doloribus omnis rem sit minima commodi velit adipisci voluptas ex officia.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt ratione repellat aspernatur necessitatibus a vitae doloremque impedit, dignissimos fuga magni quo adipisci praesentium accusantium officiis, sit ducimus perspiciatis iusto eius. Esse expedita delectus, quis veniam neque officiis necessitatibus cum pariatur mollitia fugit saepe dolorum doloribus omnis rem sit minima commodi velit adipisci voluptas ex officia.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt ratione repellat aspernatur necessitatibus a vitae doloremque impedit, dignissimos fuga magni quo adipisci praesentium accusantium officiis, sit ducimus perspiciatis iusto eius. Esse expedita delectus, quis veniam neque officiis necessitatibus cum pariatur mollitia fugit saepe dolorum doloribus omnis rem sit minima commodi velit adipisci voluptas ex officia.</p>
-				
+    <section class="content">
 
-    </div> <!--/.content -->
+			<?php $ifa = get_field('illustration_featured_image'); ?>
+			<img src="<?php echo $ifa ['sizes']['square']; ?> " alt="">
+
+			<?php $pfa = get_field('puppetry_featured_image'); ?>
+			<img src="<?php echo $pfa ['sizes']['square']; ?> " alt="">
+
+			<?php $cfa = get_field('collage_featured_image'); ?>
+			<img src="<?php echo $cfa ['sizes']['square']; ?> " alt="">
+
+    </section> <!--/.content-->
 
   </div> <!-- /.container -->
 </div> <!-- /.main -->
