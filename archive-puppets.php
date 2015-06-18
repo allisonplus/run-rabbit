@@ -6,33 +6,37 @@
 
     <h1>PUPPET GALLERY, wheeee</h1>
 
-      <?php if ( have_posts() ) the_post(); ?>
+    <?php
 
-      <h1>
-        <?php if ( is_day() ) : ?>
-          Daily Archives: <?php the_date(); ?>
-        <?php elseif ( is_month() ) : ?>
-          Monthly Archives: <?php the_date('F Y'); ?>
-        <?php elseif ( is_year() ) : ?>
-          Yearly Archives: <?php the_date('Y'); ?>
-        <?php else : ?>
-          Blog Archives
-        <?php endif; ?>
-      </h1>
+    $puppetQuery = new WP_Query(
+      array(
+        'posts_per_page' => -1,
+        'post_type' => 'puppets',
+        'order' => 'ASC'
+        )
+    ); ?>
 
-      <?php
-    	/* Since we called the_post() above, we need to
-    	 * rewind the loop back to the beginning that way
-    	 * we can run the loop properly, in full.
-    	 */
-    	rewind_posts();
+    <?php if ( $puppetQuery->have_posts() ) : ?>
 
-    	/* Run the loop for the archives page to output the posts.
-    	 * If you want to overload this in a child theme then include a file
-    	 * called loop-archives.php and that will be used instead.
-    	 */
-      get_template_part( 'loop', 'archive' );
-      ?>
+            <?php while ($puppetQuery->have_posts()) : $puppetQuery->the_post(); ?>
+
+            <div class="puppet-ind">
+              <?php echo get_the_post_thumbnail( $post->ID); ?> 
+              <?php $pp = get_field('puppet_photo'); ?>
+              <img src="<?php echo $pp['sizes']['square']; ?> " alt="">
+              <a href="<?php the_permalink(); ?>">
+              <h2><?php the_title(); ?></h2>
+              </a>
+            </div> <!--/.puppet-ind-->
+            
+            <?php endwhile; ?>
+            
+            <?php wp_reset_postdata(); ?>
+            
+          <?php else:  ?>
+            
+
+          <?php endif; ?>
 
     </div><!--/content-->
 
