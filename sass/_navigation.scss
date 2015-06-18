@@ -1,28 +1,18 @@
-ul.menu {
-	margin: 0;
-	padding: 0;
-	li {
-		display: inline;
-		margin-right: 10px;
-		a {
-			color: #333;
-			padding: 10px;
-			background: #333;
-			color: white;
-		}
-	}
-}
 
 a.menuIcon {
+	// color: white;
 	color: black;
 	font-size: 24px;
 	z-index: 999;
 	position: absolute;
-	left:2%;
+	left: 2%;
+	letter-spacing: 3px;
+	font-weight: 300;
 }
 
-div.menu ul {
+ul.menu {
 	padding: 0;
+	margin: 0;
 	position: fixed;
 	background: lightgreen;
 	font-family: sans-serif;
@@ -31,7 +21,6 @@ div.menu ul {
 	width: 20%; /*takes up percent of browser because it's fixed*/
 	top: 0;
 	left: 0;
-
 	box-shadow:0 0 10px rgba(0,0,0,0.6);
 		li {
 		// display:inline-block;
@@ -64,4 +53,5 @@ div.menu ul {
 
 .showMenu {
 	margin-right:-550px;
+	transition: margin 1s;
 }
