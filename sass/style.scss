@@ -44,17 +44,35 @@ body {
 
 h1 {
 	text-align:center;
+	margin-top:4%;
 }
 
 h1 a.title {
 	color:black;
 	font-family: 'Rock Salt', cursive;
-	font-size:40px;
+	font-size:48px;
 }
+
+// ===MAIN PAGE=== //
+
+img.feat {
+	width:25%; //temp featured image sizing
+}
+
+// ===ABOUT PAGE=== //
 
 .about-50 {
 	float:left;
 	width:50%;
+	h2 {
+		border-bottom:1px solid black;
+	}
+	p {
+		line-height:1.75;
+	}
+	.photo img {
+		max-width:none;
+	}
 }
 
 ul.contact-icons {
@@ -62,10 +80,12 @@ ul.contact-icons {
 	margin:0;
 	list-style-type:none;
 	font-size:32px;
-	// display:inline-block;
 	text-align:center;
 	li {
 		display:inline-block;
+		&:not(:last-child) {
+			margin-right:20px;
+		}
 		a {
 			color:black;
 			&:hover {

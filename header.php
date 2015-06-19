@@ -20,7 +20,8 @@
 <body <?php body_class(); ?>>
 
 <header>
-  <a class="menuIcon" href="#"> ☰ Menu</a>
+  <a class="menuIcon" href="#" aria-label="Toggle Navigation">☰ Menu</a>
+
     <div class="toggleNav">
     <?php wp_nav_menu( array(
       'container' => false,

@@ -7,13 +7,13 @@
     <section class="content">
 
 			<?php $ifa = get_field('illustration_featured_image'); ?>
-			<img src="<?php echo $ifa ['sizes']['square']; ?> " alt="">
+			<a href="http://localhost:8888/run-rabbit/illustration/"><img class="feat illus" src="<?php echo $ifa ['sizes']['feat']; ?> " alt="Featured Illustration Thumbnail"></a>
 
 			<?php $pfa = get_field('puppetry_featured_image'); ?>
-			<img src="<?php echo $pfa ['sizes']['square']; ?> " alt="">
+			<a href="http://localhost:8888/run-rabbit/puppets/"><img class="feat puppet" src="<?php echo $pfa ['sizes']['feat']; ?> " alt="Featured Puppet Thumbnail"></a>
 
 			<?php $cfa = get_field('collage_featured_image'); ?>
-			<img src="<?php echo $cfa ['sizes']['square']; ?> " alt="">
+			<a href="#"><img class="collage feat" src="<?php echo $cfa ['sizes']['feat']; ?> " alt="Featured Collage"></a>
 
     </section> <!--/.content-->
 
