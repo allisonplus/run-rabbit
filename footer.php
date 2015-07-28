@@ -1,7 +1,7 @@
 <footer>
   <div class="container">
     <p>All Content &copy; Kelly Kirkham <?php echo date('Y'); ?></p>
-    <p>Web Development by Allison Tarr</p>
+    <p>Web Development by <a href="http://www.allisontarr.com">Allison Tarr</a></p>
   </div>
 </footer>
 

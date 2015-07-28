@@ -2,9 +2,9 @@
 
 <div class="main">
   <div class="container">
+    <h1>PUPPET GALLERY, wheeee</h1>
     <div class="content">
 
-    <h1>PUPPET GALLERY, wheeee</h1>
 
     <?php
 

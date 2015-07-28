@@ -10,8 +10,6 @@
 @import 'normalize';
 @import 'typography';
 @import 'navigation';
-@import 'sidebar';
-@import 'comments';
 @import 'footer';
 /*
 ====================================
@@ -28,23 +26,31 @@ body {
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 1000px;
 	margin: 0 auto;
 }
 
 .content {
-	// float: left;
-	// width: 65%;
-	// margin-right: 5%;
+	margin: 0 auto;
+	width: 100%;
+	display: flex;
 }
 
-.full {
-	width: 100%;
+// ===HEADER== // 
+
+header {
+	img {
+		height:550px;
+	}
+}
+
+.hero {
+	display:flex;
 }
 
 h1 {
-	text-align:center;
-	margin-top:4%;
+	// text-align:center;
+	margin:4% 0;
 }
 
 h1 a.title {
@@ -55,15 +61,22 @@ h1 a.title {
 
 // ===MAIN PAGE=== //
 
-img.feat {
-	width:25%; //temp featured image sizing
+.featThumbnail {
+	// position: relative;
+
+	h3 {
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 25px;
+		color:#888;
+	}
 }
 
 // ===ABOUT PAGE=== //
 
 .about-50 {
-	float:left;
-	width:50%;
+	// float:left;
+	// width:50%;
 	h2 {
 		border-bottom:1px solid black;
 	}
@@ -89,7 +102,7 @@ ul.contact-icons {
 		a {
 			color:black;
 			&:hover {
-				color:lightgreen;
+				color:teal;
 				transition:color .6s;
 			}
 		}
@@ -99,14 +112,28 @@ ul.contact-icons {
 // ===PUPPET GALLERY / CUSTOM POST TYPES=== //
 
 .puppet-ind {
-	float:left;
-	margin:15px;
+	// float:left;
+	// margin:15px;
 }
 
 
 // ===ILLUSTRATION GALLERY / CUSTOM POST TYPES=== //
 
 .illustration-ind {
-	float:left;
-	margin:15px;
+	// float:left;
+	// margin:15px;
+}
+
+// ===SIDEBAR=== //
+
+.sidebar {
+	width: 30%;
+	float: left;
+	ul {
+		margin: 0;
+		padding: 0;
+		li {
+			list-style: none;
+		}
+	}
 }
