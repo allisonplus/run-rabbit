@@ -31,7 +31,7 @@ body {
 }
 
 .content {
-	margin: 0 auto;
+	margin: 2% auto;
 	width: 100%;
 	display: flex;
 }
@@ -58,9 +58,11 @@ h1 a.title {
 
 // ==NAV=== //
 
-.nav {
-	position:fixed;
-	width:100%;
+.sticky {
+	width: 100%;
+	z-index: 100;
+	position: fixed;
+	top: 0;
 }
 
 
@@ -80,6 +82,7 @@ h1 a.title {
 // ===ABOUT PAGE=== //
 
 .about-50 {
+	margin-top:5%;
 	// float:left;
 	// width:50%;
 	h2 {
@@ -105,7 +108,7 @@ ul.contact-icons {
 			margin-right:20px;
 		}
 		a {
-			color:black;
+			color:#515151;
 			&:hover {
 				color:teal;
 				transition:color .6s;
@@ -128,6 +131,7 @@ ul.contact-icons {
 	// float:left;
 	// margin:15px;
 }
+
 
 // ===SIDEBAR=== //
 

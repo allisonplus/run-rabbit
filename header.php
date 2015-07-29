@@ -22,7 +22,6 @@
 
 <header>
   
-
   <?php if( is_front_page() ) : ?>
   <div class="hero">
 

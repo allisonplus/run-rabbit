@@ -19,11 +19,16 @@ ul.menu {
 		display: flex;
 		margin: 0 auto;
 		&:first-child {
+			font-family: $serif;
+			// font-weight: 700;
 			flex-grow: 1;
 			align-content:space-between;
 			display:none;
 		}
 			a {
+				&:first-child {
+					letter-spacing:2px;
+				}
 				color: white;
 				display: block;
 				padding:20px;
