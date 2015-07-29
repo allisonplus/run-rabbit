@@ -9,7 +9,7 @@
 
   <?php // Load our CSS ?>
   <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-  <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500|Rock+Salt' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Muli|Playfair+Display+SC:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <!-- <link rel="icon" href="images/favicon.ico" type="image/x-icon" /> -->
 
@@ -19,7 +19,11 @@
 
 <body <?php body_class(); ?>>
 
+
 <header>
+  
+
+  <?php if( is_front_page() ) : ?>
   <div class="hero">
 
     <img src="<?php bloginfo('template_url'); ?>/assets/howl1.jpg">
@@ -31,16 +35,18 @@
     </h1>
 
     <img src="<?php bloginfo('template_url'); ?>/assets/howl2.jpg">
-    
+ 
   </div> <!--/.hero-->
 
-    <!-- <a class="menuIcon" href="#" aria-label="Toggle Navigation">☰ Menu</a> -->
+  <?php endif; ?>
 
-  <div class="nav">
-  <?php wp_nav_menu( array(
-    'container' => false,
-    'theme_locations' => 'primary'
-  )); ?>
-  </div> <!--/.nav-->
+  <nav>
+    <?php wp_nav_menu( array(
+      'container' => false,
+      'theme_locations' => 'primary'
+    )); ?>
+  </nav>
+
+    <!-- <a class="menuIcon" href="#" aria-label="Toggle Navigation">☰ Menu</a> -->
 
 </header><!--/.header-->

@@ -9,7 +9,7 @@
 
 @import 'normalize';
 @import 'typography';
-@import 'navigation';
+@import 'header';
 @import 'footer';
 /*
 ====================================
@@ -40,24 +40,29 @@ body {
 
 header {
 	img {
-		height:350px;
+		// height:350px;
 	}
 }
 
 .hero {
 	display:flex;
 	align-items: center;
-	// justify-content: center;
-	// justify-content: space-between;
 	justify-content: space-around;
-
 }
 
 h1 a.title {
 	color:black;
-	// font-family: 'Rock Salt', cursive;
-	font-size:48px;
+	font-family: $serif;
+	font-size:66px;
 }
+
+// ==NAV=== //
+
+.nav {
+	position:fixed;
+	width:100%;
+}
+
 
 // ===MAIN PAGE=== //
 
