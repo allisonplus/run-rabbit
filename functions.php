@@ -12,9 +12,10 @@ function theme_setup() {
 	*  sizes with add_image_size. */
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size(120, 90, true);
-	add_image_size('square', 150, 150, true);
+	add_image_size('square', 350, 350, true);
 	add_image_size('artist', 600, 348, true);
-	add_image_size('feat', 600, 500, false);
+	add_image_size('feat', 600, 500, true);
+	add_image_size('full-size', 600, false);
 
 	// Add default posts and comments RSS feed links to head
 	add_theme_support( 'automatic-feed-links' );

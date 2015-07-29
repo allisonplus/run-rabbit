@@ -8,13 +8,13 @@
 
       <?php
 
-          $illustrationQuery = new WP_Query(
-            array(
-              'posts_per_page' => -1,
-              'post_type' => 'illustration',
-              'order' => 'ASC'
-              )
-          ); ?>
+        $illustrationQuery = new WP_Query(
+          array(
+            'posts_per_page' => -1,
+            'post_type' => 'illustration',
+            'order' => 'ASC'
+            )
+        ); ?>
 
           <?php if ( $illustrationQuery->have_posts() ) : ?>
 
@@ -23,7 +23,7 @@
                   <div class="illustration-ind">
                     <?php echo get_the_post_thumbnail( $post->ID); ?> 
                     <?php $pp = get_field('photo'); ?>
-                    <img src="<?php echo $pp['sizes']['square']; ?> " alt="">
+                    <img src="<?php echo $pp['sizes']['square']; ?>" alt="">
                     <a href="<?php the_permalink(); ?>">
                     <h2><?php the_title(); ?></h2>
                     </a>
