@@ -40,22 +40,22 @@ body {
 
 header {
 	img {
-		height:550px;
+		height:350px;
 	}
 }
 
 .hero {
 	display:flex;
-}
+	align-items: center;
+	// justify-content: center;
+	// justify-content: space-between;
+	justify-content: space-around;
 
-h1 {
-	// text-align:center;
-	margin:4% 0;
 }
 
 h1 a.title {
 	color:black;
-	font-family: 'Rock Salt', cursive;
+	// font-family: 'Rock Salt', cursive;
 	font-size:48px;
 }
 
