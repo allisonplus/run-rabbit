@@ -10,6 +10,8 @@ $(document).ready(function() {
       //if scrolled down more than the height of hero + stats
       if ($(window).scrollTop() > totalHeight) {
         $('nav').addClass('sticky');
+        $('.main').css({"margin-top":"70px"});
+
         $('ul.menu li:first-child').css({
             "display":"flex"
         });
@@ -17,6 +19,8 @@ $(document).ready(function() {
         } else {
         // resetting nav when scrolled up
         $('nav').removeClass('sticky');
+        $('.main').css({"margin-top":"0px"});
+
         $('ul.menu li:first-child').css({
             "display":"none"
         });
