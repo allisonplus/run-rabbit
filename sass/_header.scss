@@ -1,3 +1,32 @@
+// ===HEADER== // 
+
+header {
+	img {
+		// height:350px;
+	}
+}
+
+.hero {
+	display:flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+h1 a.title {
+	color:black;
+	font-family: $serif;
+	font-size:66px;
+}
+
+// ==NAV=== //
+
+.sticky {
+	width: 100%;
+	z-index: 100;
+	position: fixed;
+	top: 0;
+}
+
 
 // MENU //
 
