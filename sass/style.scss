@@ -10,7 +10,8 @@
 @import 'normalize';
 @import 'typography';
 @import 'header';
-@import 'footer';
+@import 'blog';
+
 /*
 ====================================
 Default Styling
@@ -133,16 +134,14 @@ ul.contact-icons {
 }
 
 
-// ===SIDEBAR=== //
+// ===FOOTER=== //
 
-.sidebar {
-	width: 30%;
-	float: left;
-	ul {
-		margin: 0;
-		padding: 0;
-		li {
-			list-style: none;
-		}
+footer {
+	padding:2% 0;
+	clear: both;
+	p {
+		margin:0;
+		text-align:center;
+		font-size: 12px;
 	}
 }
