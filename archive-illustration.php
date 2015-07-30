@@ -1,10 +1,9 @@
 <?php get_header(); ?>
 
-<div class="main">
+<div class="beta">
   <div class="container">
-    <h1>Illustrations, wheeee</h1>
+    <h2>Illustrations</h2>
     <div class="content">
-
 
       <?php
 
@@ -40,6 +39,6 @@
     </div><!--/content-->
 
   </div> <!-- /.container -->
-</div> <!-- /.main -->
+</div> <!-- /.beta-->
 
 <?php get_footer(); ?>

@@ -1,7 +1,7 @@
-<?php //home.php duplicated index to hopefully form blog page ?>
+<?php //home.php duplicated index to be blog page ?>
 <?php get_header(); ?>
 
-<div class="main">
+<div class="blog">
   <div class="container">
 
     <div class="blogContent">
@@ -11,6 +11,6 @@
     	<?php get_sidebar(); ?>
 
   </div> <!-- /.container -->
-</div> <!-- /.main -->
+</div> <!-- /.blog -->
 
 <?php get_footer(); ?>

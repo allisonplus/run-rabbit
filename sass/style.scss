@@ -32,39 +32,24 @@ body {
 }
 
 .content {
-	margin: 2% auto;
+	margin: 0 auto;
 	width: 100%;
 	display: flex;
 }
 
-// ===HEADER== // 
-
-header {
-	img {
-		// height:350px;
-	}
+.beta {
+	padding-top:10%;
 }
 
-.hero {
-	display:flex;
-	align-items: center;
-	justify-content: space-around;
+.blog {
+	padding-top:4%;
 }
 
-h1 a.title {
-	color:black;
-	font-family: $serif;
-	font-size:66px;
-}
-
-// ==NAV=== //
-
-.sticky {
-	width: 100%;
-	z-index: 100;
-	position: fixed;
-	top: 0;
-}
+// .main, 
+// .blogContent,
+// .sidebar {
+// 	padding-top:100px;
+// }
 
 
 // ===MAIN PAGE=== //
@@ -83,7 +68,7 @@ h1 a.title {
 // ===ABOUT PAGE=== //
 
 .about-50 {
-	margin-top:5%;
+	// margin-top:5%;
 	// float:left;
 	// width:50%;
 	h2 {

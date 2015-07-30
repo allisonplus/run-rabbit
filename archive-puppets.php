@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<div class="main">
+<div class="beta">
   <div class="container">
-    <h1>PUPPET GALLERY, wheeee</h1>
+    <h2>Puppets</h2>
     <div class="content">
 
 
@@ -41,6 +41,6 @@
     </div><!--/content-->
 
   </div> <!-- /.container -->
-</div> <!-- /.main -->
+</div> <!-- /.beta -->
 
 <?php get_footer(); ?>

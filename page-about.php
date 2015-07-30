@@ -1,6 +1,6 @@
 <?php get_header();  ?>
 
-<div class="main">
+<div class="beta">
   <div class="container">
 
     <div class="content">
@@ -27,6 +27,6 @@
     </div> <!-- /,content -->
 
   </div> <!-- /.container -->
-</div> <!-- /.main -->
+</div> <!-- /.beta -->
 
 <?php get_footer(); ?>
