@@ -2,31 +2,31 @@
 
 <div class="beta">
   <div class="container">
-    <h2>Illustrations</h2>
-    <h3>Black & White or Colour, Sketchy or Finished, Animal or People or...?!</h3>
+    <h2>Collage & Assemblage</h2>
+    <h3>Papers, glitter, drawings, paintings, wood, nails, maps & wire</h3>
     <div class="content">
 
       <?php
 
-        $illustrationQuery = new WP_Query(
+        $collageQuery = new WP_Query(
           array(
             'posts_per_page' => -1,
-            'post_type' => 'illustration',
+            'post_type' => 'collage',
             'order' => 'ASC'
             )
         ); ?>
 
-          <?php if ( $illustrationQuery->have_posts() ) : ?>
+          <?php if ( $collageQuery->have_posts() ) : ?>
 
-                  <?php while ($illustrationQuery->have_posts()) : $illustrationQuery->the_post(); ?>
+                  <?php while ($collageQuery->have_posts()) : $collageQuery->the_post(); ?>
 
-                  <div class="illustration-ind">
+                  <div class="collage-ind">
                     <?php echo get_the_post_thumbnail( $post->ID); ?> 
                     <?php $pp = get_field('photo'); ?>
                     <a href="<?php the_permalink(); ?>">
                     <img src="<?php echo $pp['sizes']['square']; ?>" alt="">
                     </a>
-                  </div> <!--/.illustration-ind-->
+                  </div> <!--/.collage-ind-->
                   
                   <?php endwhile; ?>
                   

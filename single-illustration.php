@@ -7,14 +7,14 @@
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-          <h1 class="entry-title"><?php the_title(); ?></h1>
+          <h2 class="entry-title"><?php the_title(); ?></h2>
 
           <?php $pp = get_field('photo'); ?>
 
           <img src="<?php echo $pp['sizes']['full-size']; ?> " alt="Full-size Illustration">
 
           <div class="portfolioContent">
-            <h2>Mediums Utilized</h2>
+            <h3>Mediums Utilized</h3>
             <ul class="methodsSingle">
                 <?php $taxonomyItems = get_the_terms($post->ID, 'method', '', ',', '');
                 //performs one time for each taxonomy item

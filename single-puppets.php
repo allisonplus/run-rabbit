@@ -7,26 +7,24 @@
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-          <h1 class="entry-title"><?php the_title(); ?></h1>
 
           <?php $pp = get_field('puppet_photo'); ?>
 
           <img src="<?php echo $pp['sizes']['full-size']; ?> " alt="Full-size Puppet">
 
-          <div class="portfolioContent">
-            <h2>Mediums Utilized</h2>
-            <ul class="methodsSingle">
-                <?php $taxonomyItems = get_the_terms($post->ID, 'method', '', ',', '');
+          <div class="archiveContent">
+            <h2 class="entry-title"><?php the_title(); ?></h2>
+            <h4>Mediums Utilized</h4>
+            <ul class="mediumsSingle">
+                <?php $taxonomyItems = get_the_terms($post->ID, 'material', '', ',', '');
                 //performs one time for each taxonomy item
                 foreach ($taxonomyItems as $taxonomyItem) {
                   // prints the taxonomy name wrapped in a list item
                   echo '<li>'.$taxonomyItem->name.'</li>';
                  };
                 ?>
-            </ul> <!--/.tech-->
-          </div> <!--/.portfolioContent-->
-
-
+            </ul> <!--/.mediumsSingle-->
+          </div> <!--/.archiveContent-->
 
           <div class="entry-content">
             <?php the_content(); ?>
@@ -49,8 +47,6 @@
       <?php endwhile; // end of the loop. ?>
 
     </div> <!-- /.content -->
-
-    
 
   </div> <!-- /.container -->
 </div> <!-- /.beta -->

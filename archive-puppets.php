@@ -3,6 +3,7 @@
 <div class="beta">
   <div class="container">
     <h2>Puppets</h2>
+    <h3>Paper Mache, Hand, Marionettes, Unusual</h3>
     <div class="content">
 
 
@@ -23,9 +24,8 @@
             <div class="puppet-ind">
               <?php echo get_the_post_thumbnail( $post->ID); ?> 
               <?php $pp = get_field('puppet_photo'); ?>
-              <img src="<?php echo $pp['sizes']['square']; ?> " alt="">
               <a href="<?php the_permalink(); ?>">
-              <h2><?php the_title(); ?></h2>
+              <img src="<?php echo $pp['sizes']['square']; ?> " alt="">
               </a>
             </div> <!--/.puppet-ind-->
             
