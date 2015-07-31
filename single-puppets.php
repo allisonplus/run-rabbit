@@ -9,9 +9,9 @@
         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
           <h1 class="entry-title"><?php the_title(); ?></h1>
 
-          <?php $pp = get_field('photo'); ?>
+          <?php $pp = get_field('puppet_photo'); ?>
 
-          <img src="<?php echo $pp['sizes']['full-size']; ?> " alt="Full-size Illustration">
+          <img src="<?php echo $pp['sizes']['full-size']; ?> " alt="Full-size Puppet">
 
           <div class="portfolioContent">
             <h2>Mediums Utilized</h2>
