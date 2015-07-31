@@ -39,8 +39,8 @@
 
 </div> <!-- /.betaBlog -->
 
+<?php get_sidebar(); ?>
 </div>
 
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
