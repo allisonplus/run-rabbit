@@ -10,10 +10,22 @@
 
 .blogContent {
 	display: flex;
-	// flex-direction:row;
 	flex-direction:column;
 	width: 70%;
-	padding: 0 5%;
+	padding: 2% 5%;
+}
+
+.blogContent {
+	.entry-title {
+		margin:0;
+	}
+	p {
+		margin:0;
+	}
+
+	a {
+		color:#4C413F;
+	}
 }
 
 // ===SIDEBAR=== //
@@ -22,7 +34,11 @@
 	display: flex;
 	width: 30%;
 	flex-direction:row;
-	// padding: 2.5% 0;
+	padding: 2% 0;
+
+	.widget-title:first-child {
+		margin-top:0;
+	}
 
 	ul {
 		margin: 0;
