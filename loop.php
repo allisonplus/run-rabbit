@@ -17,13 +17,21 @@
 <?php while ( have_posts() ) : the_post(); ?>
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
 		
 			<h2 class="entry-title">
         <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark">
           <?php the_title(); ?>
         </a>
       </h2>
+
+      <div class="meta-data">
+      	<p>Posted on <?php echo get_the_date('F jS, Y'); ?> within
+      		<?php 
+      		$category = get_the_category(); 
+      		if($category[0]){
+      		echo '<a href="'.get_category_link($category[0]->term_id ).'">'.$category[0]->cat_name.'</a>';
+      		} ?></p>
+      </div> <!--/.meta-data-->
 
 			<section class="entry-content">
 				<?php the_content('Continue reading <span class="meta-nav">&rarr;</span>'); ?>
@@ -34,8 +42,7 @@
 			</section><!-- .entry-content -->
 
 			<footer>
-				<p><?php the_tags('Tags: ', ', ', '<br>'); ?> Posted in <?php the_category(', '); ?></p>
-  
+				<p><?php the_tags('Tags: ', ', ', '<br>'); ?></p>
 			</footer>
 
 		</article><!-- #post-## -->
