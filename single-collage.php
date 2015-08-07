@@ -8,23 +8,23 @@
 
         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-          <?php $pp = get_field('photo'); ?>
+          <?php $pp = get_field('collage_photo'); ?>
 
-          <img src="<?php echo $pp['sizes']['full-size']; ?> " alt="Full-size Illustration">
+          <img src="<?php echo $pp['sizes']['full-size']; ?> " alt="Full-size Collage">
 
           <div class="archiveContent">
             <h2 class="entry-title"><?php the_title(); ?></h2>
-            <!-- <h3>Mediums Utilized</h3> -->
-            <ul class="methodsSingle">
-                <?php $taxonomyItems = get_the_terms($post->ID, 'method', '', ',', '');
+            <!-- <h4>Mediums Utilized</h4> -->
+            <ul class="mediumsSingle">
+                <?php $taxonomyItems = get_the_terms($post->ID, 'material', '', ',', '');
                 //performs one time for each taxonomy item
                 foreach ($taxonomyItems as $taxonomyItem) {
                   // prints the taxonomy name wrapped in a list item
                   echo '<li>'.$taxonomyItem->name.'</li>';
                  };
                 ?>
-            </ul> <!--/.tech-->
-          </div> <!--/.portfolioContent-->
+            </ul> <!--/.mediumsSingle-->
+          </div> <!--/.archiveContent-->
 
           <div class="entry-content">
             <?php the_content(); ?>
@@ -46,9 +46,7 @@
 
       <?php endwhile; // end of the loop. ?>
 
-    </div> <!-- /.content -->
-
-    
+    </div> <!-- /.singleContent -->
 
   </div> <!-- /.container -->
 </div> <!-- /.beta -->
