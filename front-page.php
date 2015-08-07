@@ -2,7 +2,6 @@
 <?php get_header(); ?>
 
 <div class="main clearfix">
-  <div class="container clearfix">
 
     <section class="content">
 
@@ -26,6 +25,7 @@
 
     </section> <!--/.content-->
 
+  <div class="container clearfix">
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta eius, laudantium voluptates inventore, amet culpa dolorum porro, quod voluptatibus reiciendis deleniti? Omnis ducimus maiores maxime ratione, placeat quia ea, consectetur rerum esse non sit iure?</p>
 			<p>Sunt repellat reiciendis ducimus aliquam saepe neque unde fuga, ea perspiciatis voluptatibus accusantium nihil autem, eveniet inventore quaerat odio non quod voluptate incidunt illum consequuntur nostrum, totam ullam aspernatur molestias. Consequuntur non vel harum amet.</p>
 			<p>Esse nam beatae sequi, molestias unde! Voluptatum deleniti ratione enim nihil molestias dolorem eum sed earum! Id distinctio reiciendis deleniti laudantium voluptas, ipsa iusto harum sunt rerum, tempora magnam sequi consequatur sit delectus voluptatibus dolor.</p>

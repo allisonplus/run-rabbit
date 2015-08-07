@@ -24,17 +24,9 @@
   
   <?php if( is_front_page() ) : ?>
   <div class="hero">
-
-    <img src="<?php bloginfo('template_url'); ?>/assets/howl1.jpg">
-
-    <h1>
-      <a class="title" href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-        <?php bloginfo( 'name' ); ?>
-      </a>
+    <h1><a class="title" href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
+        <?php bloginfo( 'name' ); ?></a>
     </h1>
-
-    <img src="<?php bloginfo('template_url'); ?>/assets/howl2.jpg">
- 
   </div> <!--/.hero-->
 
   <?php endif; ?>

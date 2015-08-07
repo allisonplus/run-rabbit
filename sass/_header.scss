@@ -1,13 +1,25 @@
 // ===HEADER== // 
 
 .hero {
+	background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./assets/cloud-collage.jpg");
+	opacity: 0.4;
+	background-size:cover;
+	height:550px;
+	position: relative;
 	display:flex;
 	align-items: center;
 	justify-content: space-around;
+	img {
+		width:1600px;
+	}
+}
+
+h1 {
+	margin:0;
 }
 
 h1 a.title {
-	color:black;
+	color:#000;
 	font-family: $serif;
 	font-size:66px;
 }
@@ -26,7 +38,6 @@ h1 a.title {
 
 nav {
 	background-color: #4C413F;
-
 	font-family: $sans;
 	padding: 0;
 	margin: 0;
