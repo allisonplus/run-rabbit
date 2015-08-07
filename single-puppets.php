@@ -14,7 +14,7 @@
 
           <div class="archiveContent">
             <h2 class="entry-title"><?php the_title(); ?></h2>
-            <h4>Mediums Utilized</h4>
+            <!-- <h4>Mediums Utilized</h4> -->
             <ul class="mediumsSingle">
                 <?php $taxonomyItems = get_the_terms($post->ID, 'material', '', ',', '');
                 //performs one time for each taxonomy item

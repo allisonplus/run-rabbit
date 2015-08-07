@@ -22,7 +22,7 @@
 
                   <div class="collage-ind">
                     <?php echo get_the_post_thumbnail( $post->ID); ?> 
-                    <?php $pp = get_field('photo'); ?>
+                    <?php $pp = get_field('collage_photo'); ?>
                     <a href="<?php the_permalink(); ?>">
                     <img src="<?php echo $pp['sizes']['square']; ?>" alt="">
                     </a>
