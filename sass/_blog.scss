@@ -57,3 +57,28 @@
 #tag_cloud-2 {
 	max-width:300px;
 }
+
+// = Category Archive Section = //
+
+.theta .content {
+	display: flex;
+	// justify-content:space-around;
+	flex-wrap:wrap;
+	// align-items:flex-start;
+	h2.blog-title {
+		font-size: 21px;
+		margin-bottom:0;
+	}
+	.meta-data p {
+		margin:0;
+	}
+}
+
+.theta .content article {
+	width:31%;
+	max-height:300px;
+	overflow:hidden;
+	&:not(:last-child) {
+		margin-right:2%;
+	}
+}

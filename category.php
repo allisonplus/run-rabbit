@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
-<div class="main">
+<div class="theta">
   <div class="container">
+      <h2>Category Archives: <?php single_cat_title(); ?></h2>
     <div class="content">
 
-      <h1>Category Archives: <?php single_cat_title(); ?></h1>
     	<?php
     		$category_description = category_description();
     		if ( ! empty( $category_description ) )
@@ -14,9 +14,7 @@
 
     </div> <!-- /.content -->
 
-    <?php get_sidebar(); ?>
-
   </div> <!-- /.container -->
-</div> <!-- /.main -->
+</div> <!-- /.beta -->
 
 <?php get_footer(); ?>

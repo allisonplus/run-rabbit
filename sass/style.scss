@@ -43,7 +43,8 @@ body {
 	padding-top:10%;
 }
 
-.theBlog {
+.theBlog,
+.theta {
 	padding-top:4%;
 }
 
@@ -62,9 +63,7 @@ body {
 // ===ABOUT PAGE=== //
 
 .about-50 {
-	// margin-top:5%;
-	// float:left;
-	// width:50%;
+
 	h2 {
 		border-bottom:1px solid black;
 	}
@@ -138,7 +137,6 @@ ul.methodsSingle {
 	}
 }
 
-
 // = Prev/Next Links = //
 
 .navigation {
@@ -151,6 +149,7 @@ ul.methodsSingle {
 	display: flex;
 	justify-content:space-between;
 	margin-top:5%;
+	width:100%;
 }
 
 
