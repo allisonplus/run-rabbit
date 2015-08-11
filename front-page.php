@@ -7,20 +7,18 @@
 
 			<div class="featThumbnail">
 				<?php $ifa = get_field('illustration_featured_image'); ?>
-				<a href="http://localhost:8888/run-rabbit/illustration/"><img class="feat illus" src="<?php echo $ifa ['sizes']['feat']; ?> " alt="Featured Illustration Thumbnail"></a>
-				<h3>Illustration</h3>
+				<a href="http://localhost:8888/run-rabbit/illustration/"><img class="feat illus" src="<?php echo $ifa ['sizes']['feat']; ?> " alt="Featured Illustration Thumbnail"><h3>Illustration</h3></a>
 			</div>
 
 			<div class="featThumbnail">
 				<?php $pfa = get_field('puppetry_featured_image'); ?>
-				<a href="http://localhost:8888/run-rabbit/puppets/"><img class="feat puppet" src="<?php echo $pfa ['sizes']['feat']; ?> " alt="Featured Puppet Thumbnail"></a>
-				<h3>Puppetry</h3>
+				<a href="http://localhost:8888/run-rabbit/puppets/"><img class="feat puppet" src="<?php echo $pfa ['sizes']['feat']; ?> " alt="Featured Puppet Thumbnail"><h3>Puppetry</h3></a>
 			</div>
 
 			<div class="featThumbnail">
 				<?php $cfa = get_field('collage_featured_image'); ?>
-				<a href="#"><img class="collage feat" src="<?php echo $cfa ['sizes']['feat']; ?> " alt="Featured Collage"></a>
-				<h3>Collage</h3>
+				<a href="#"><img class="collage feat" src="<?php echo $cfa ['sizes']['feat']; ?> " alt="Featured Collage"><h3>Collage</h3>
+				</a>
 			</div>
 
     </section> <!--/.content-->
