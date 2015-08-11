@@ -1,14 +1,11 @@
 <?php get_header(); ?>
 
-<div class="main">
+<div class="theta">
   <div class="container">
-
+		<h2 class="tagTitle">Tag Archives: <?php single_tag_title(); ?></h2>
     <div class="content">
-      <h1>Tag Archives: <?php single_tag_title(); ?></h1>
       <?php get_template_part( 'loop', 'tag' ); ?>
     </div> <!-- /.content -->
-
-    <?php get_sidebar(); ?>
 
   </div><!-- /.container -->
 </div><!-- /.main -->

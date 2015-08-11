@@ -40,18 +40,17 @@ body {
 }
 
 .beta {
-	padding-top:10%;
+	padding-top:8%;
 }
 
 .theBlog,
 .theta {
-	padding-top:4%;
+	padding-top:6%;
 }
 
 // ===MAIN PAGE=== //
 
 .featThumbnail {
-
 	h3 {
 		text-align: center;
 		text-transform: uppercase;
@@ -109,7 +108,7 @@ ul.contact-icons {
 .archiveContent {
 	display: flex;
 	flex-direction:column;
-	justify-content: center;
+	// justify-content: center;
 }
 
 h2.entry-title {
