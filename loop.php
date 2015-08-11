@@ -18,7 +18,7 @@
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		
-			<h2 class="entry-title">
+			<h2 class="blog-title">
         <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark">
           <?php the_title(); ?>
         </a>
@@ -42,7 +42,7 @@
 			</section><!-- .entry-content -->
 
 			<footer>
-				<p><?php the_tags('Tags: ', ', ', '<br>'); ?></p>
+				
 			</footer>
 
 		</article><!-- #post-## -->
@@ -53,7 +53,9 @@
 <?php endwhile; // End the loop. Whew. ?>
 
 <?php // Display navigation to next/previous pages when applicable ?>
+<div class="pagesNav">
 <?php if (  $wp_query->max_num_pages > 1 ) : ?>
   <p class="alignleft"><?php next_posts_link('&laquo; Older Entries'); ?></p>
   <p class="alignright"><?php previous_posts_link('Newer Entries &raquo;'); ?></p>
+</div> <!--/pagesNav-->
 <?php endif; ?>
