@@ -435,18 +435,9 @@ function rrr_get_illustration_section() {
 			<div class="illustration-shell wrap">
 		<?php while ( $illustrations->have_posts() ) : $illustrations->the_post(); ?>
 
-		<?php
-			// $url = get_post_meta( get_the_ID(), 'testimonial_url', true );
-			// $image = get_field( 'testimonial_photo' )['sizes']['thumbnail'];
-			// $alt = get_field( 'testimonial_photo' )['alt'];
-			// $source = get_post_meta( get_the_ID(), 'source', true );
-		?>
-
-			<!-- <h2>blah blah blah</h2> -->
 			<article>
-
-			<h2><?php the_title(); ?></h2>
-			<?php the_post_thumbnail( 'medium' ); ?>
+				<h2><?php the_title(); ?></h2>
+				<?php the_post_thumbnail( 'medium' ); ?>
 			</article>
 
 		<?php endwhile; ?>
@@ -454,6 +445,47 @@ function rrr_get_illustration_section() {
 
 		</section><!--.section-->
 
+	<?php
+	return ob_get_clean();
+}
+
+/**
+ * Social links for the footer.
+ */
+function rrr_get_footer_social_links() {
+
+	// Set an array of social networks.
+	$social_networks = array( 'facebook', 'instagram' );
+	$email = get_theme_mod( 'rrr_email_link' );
+
+	ob_start(); ?>
+
+	<ul class="social-networks">
+
+	<?php // If there's no email, don't make this <li> in the first place .?>
+	<?php if ( ! empty( $email ) ) : ?>
+		<li class="social-network email">
+			<a href="mailto:<?php echo esc_attr( $email ); ?>">
+				<?php echo rrr_get_svg( array( 'icon' => 'email-square', '' ) ); // WPCS: XSS OK. ?>
+			</a>
+		</li>
+	<?php endif; ?>
+
+	<?php // Continue <li>'s with rest of social networks provided. ?>
+	<?php foreach ( $social_networks as $network ) :
+
+		$link_value = get_theme_mod( 'rrr_' . $network . '_link' ); ?>
+
+		<?php if ( ! empty( $link_value ) ) : ?>
+			<li class="social-network <?php echo $network; // WPCS: XSS OK. ?>">
+				<a href="<?php echo esc_url( get_theme_mod( 'rrr_' . $network . '_link' ) ); ?>">
+					<?php echo rrr_get_svg( array( 'icon' => $network . '-square', 'title' => $network . '' ) ); // WPCS: XSS OK. ?>
+				</a>
+			</li>
+
+		<?php endif; ?>
+	<?php endforeach; ?>
+	</ul><!-- .social-networks -->
 	<?php
 	return ob_get_clean();
 }

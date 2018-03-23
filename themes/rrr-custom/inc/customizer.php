@@ -25,8 +25,26 @@ function rrr_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Add our Contact Email field.
+	$wp_customize->add_setting(
+		'rrr_email_link',
+		array(
+			'default' => '',
+		)
+	);
+
+	$wp_customize->add_control(
+		'rrr_email_link',
+		array(
+			'label'       => esc_html__( 'Email', 'rrr' ),
+			'section'     => 'rrr_social_links_section',
+			'type'        => 'email',
+			// 'sanitize'    => 'html',
+		)
+	);
+
 	// Create an array of our social links for ease of setup.
-	$social_networks = array( 'twitter', 'facebook', 'instagram' );
+	$social_networks = array( 'facebook', 'instagram' );
 
 	// Loop through our networks to setup our fields.
 	foreach ( $social_networks as $network ) {
