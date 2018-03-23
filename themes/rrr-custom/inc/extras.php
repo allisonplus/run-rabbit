@@ -43,3 +43,50 @@ function rrr_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'rrr_body_classes' );
+
+add_action( 'login_enqueue_scripts', 'rrr_custom_login' );
+/**
+ * Customize the login screen styles.
+ */
+function rrr_custom_login() {
+	?>
+
+	<style type="text/css">
+		.login {
+			align-items: center;
+			background-color: #cafff5;
+			background-image: linear-gradient(0deg, #cafff5 0%, #deffde 100%);
+			display: flex;
+			flex-direction: column;
+			height: 100vh;
+			justify-content: center;
+		}
+		#login {
+			padding: 0 !important;
+		}
+		#login h1 a,
+		.login h1 a {
+			background-image: url( <?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/rrr-login.png' ); ?> );
+			background-size: contain;
+			height: 150px;
+			width: 150px;
+		}
+		.login #nav a,
+		#login #nav a,
+		.login #backtoblog a,
+		#login #backtoblog a {
+			color: #111;
+		}
+		.login #nav a:hover,
+		#login #nav a:hover,
+		.login #backtoblog a:hover,
+		#login #backtoblog a:hover {
+			color: #111;
+		}
+
+		.login #backtoblog, .login #nav {
+			padding: 0!important;
+		}
+	</style>
+	<?php
+}

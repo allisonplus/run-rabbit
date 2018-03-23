@@ -337,7 +337,16 @@ function rrr_do_copyright_text() {
 	}
 
 	// Echo the text.
-	echo '<span class="copyright-text">' . wp_kses_post( $copyright_text ) . '</span>';
+	echo '<span class="copyright-text">	&#169;' . date( 'Y' ) . ' ' . wp_kses_post( $copyright_text ) . '</span>'; // WPCS: XSS OK.
+}
+
+/**
+ * Echo build text for dev info.
+ */
+function rrr_do_build_text() {
+
+	// Echo the text.
+	echo '<div class="dev-info">' . esc_html( 'Built with ', 'rrr' ) . '<span class="heart">&#9829; </span>' . esc_html( 'by ', 'rrr' ) . '<a class="dev-link" href="' . esc_url( 'http://www.allisontarr.com', 'rrr' ) . '">Allison Tarr</a></div>'; // WPCS: XSS OK.
 }
 
 /**
@@ -410,4 +419,41 @@ function rrr_do_mobile_navigation_menu() {
 		?>
 	</nav>
 <?php
+}
+
+
+/**
+ * Illustration Section
+ */
+function rrr_get_illustration_section() {
+
+	ob_start(); ?>
+
+		<?php $illustrations = rrr_query_illustrations(); ?>
+
+		<section class="illustration">
+			<div class="illustration-shell wrap">
+		<?php while ( $illustrations->have_posts() ) : $illustrations->the_post(); ?>
+
+		<?php
+			// $url = get_post_meta( get_the_ID(), 'testimonial_url', true );
+			// $image = get_field( 'testimonial_photo' )['sizes']['thumbnail'];
+			// $alt = get_field( 'testimonial_photo' )['alt'];
+			// $source = get_post_meta( get_the_ID(), 'source', true );
+		?>
+
+			<!-- <h2>blah blah blah</h2> -->
+			<article>
+
+			<h2><?php the_title(); ?></h2>
+			<?php the_post_thumbnail( 'medium' ); ?>
+			</article>
+
+		<?php endwhile; ?>
+			</div><!--.illustration-shell-->
+
+		</section><!--.section-->
+
+	<?php
+	return ob_get_clean();
 }
