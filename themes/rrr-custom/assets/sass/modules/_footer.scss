@@ -6,13 +6,25 @@
 	text-align: center;
 
 	.dev-info {
-		font-size: 14px;
+		font-size: 13px;
+
+		.dev-link {
+			border-radius: 5px;
+			color: $color-river;
+			padding: 1px 4px;
+			transition: all 0.3s linear;
+
+			&:hover {
+				background-color: $color-turq;
+				color: $color-black;
+			}
+		}
 	}
 
 	span.heart {
 		background-color: $color-turq;
 		border-radius: 8px;
 		color: $color-river;
-		padding: 0 3px;
+		padding: 1px 3px;
 	}
 } // .site-footer
