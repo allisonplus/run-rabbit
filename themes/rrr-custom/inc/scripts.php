@@ -2,7 +2,7 @@
 /**
  * Custom scripts and styles.
  *
- * @package Starter Theme
+ * @package Run Rabbit Run
  */
 
 /**

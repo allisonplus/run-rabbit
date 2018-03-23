@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package Starter Theme
+ * @package Run Rabbit Run
  */
 
 get_header(); ?>

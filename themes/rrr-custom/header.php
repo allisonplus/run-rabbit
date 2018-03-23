@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Starter Theme
+ * @package Run Rabbit Run
  */
 
 ?><!DOCTYPE html>

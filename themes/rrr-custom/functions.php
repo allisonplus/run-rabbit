@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Starter Theme
+ * @package Run Rabbit Run
  */
 
 if ( ! function_exists( 'rrr_setup' ) ) :
@@ -122,6 +122,10 @@ add_action( 'widgets_init', 'rrr_widgets_init' );
  */
 require get_template_directory() . '/inc/custom-header.php';
 
+/**ACFtemplate tags for this theme.
+ */
+require get_template_directory() . '/inc/acf.php';
+
 /**
  * Custom template tags for this theme.
  */
@@ -131,6 +135,11 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+/**
+ * Load custom queries.
+ */
+require get_template_directory() . '/inc/queries.php';
 
 /**
  * Customizer additions.

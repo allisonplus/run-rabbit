@@ -2,7 +2,7 @@
 /**
  * _s Theme Customizer.
  *
- * @package Starter Theme
+ * @package Run Rabbit Run
  */
 
 /**
