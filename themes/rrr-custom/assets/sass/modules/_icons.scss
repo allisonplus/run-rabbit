@@ -31,3 +31,35 @@
 		}
 	}
 }
+
+.social-networks {
+	@include clearfix;
+	@include list-reset;
+
+	margin-top: $gutter;
+
+	li {
+		display: inline-block;
+
+		&:not(:last-of-type) {
+			margin-right: $gutter;
+		}
+
+		svg {
+			@include size(30px 30px);
+
+			fill: $color-river;
+		}
+
+		a {
+			display: block;
+			font-size: 0;
+
+			&:hover {
+				svg {
+					fill: $color-turq;
+				}
+			}
+		}
+	}
+}
