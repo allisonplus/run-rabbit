@@ -346,7 +346,7 @@ function rrr_do_copyright_text() {
 function rrr_do_build_text() {
 
 	// Echo the text.
-	echo '<div class="dev-info">' . esc_html( 'Built with ', 'rrr' ) . '<span class="heart">&#9829; </span>' . esc_html( 'by ', 'rrr' ) . '<a class="dev-link" href="' . esc_url( 'http://www.allisontarr.com', 'rrr' ) . '">Allison Tarr</a></div>'; // WPCS: XSS OK.
+	echo '<div class="dev-info">' . esc_html( 'Built with ', 'rrr' ) . '<span class="heart">&#9829;</span>' . esc_html( ' by ', 'rrr' ) . '<a class="dev-link" href="' . esc_url( 'http://www.allisontarr.com', 'rrr' ) . '">Allison Tarr</a></div>'; // WPCS: XSS OK.
 }
 
 /**

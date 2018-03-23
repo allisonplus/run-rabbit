@@ -8,4 +8,11 @@
 	.dev-info {
 		font-size: 14px;
 	}
+
+	span.heart {
+		background-color: $color-turq;
+		border-radius: 8px;
+		color: $color-river;
+		padding: 0 3px;
+	}
 } // .site-footer
