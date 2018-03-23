@@ -15,8 +15,16 @@
 	}
 }
 
-.site-header,
-.site-footer {
+.site-header {
+	@include size(270px 100%);
+	@include position(fixed, 0 null null 0);
+
+	background-color: white;
+	box-sizing: border-box;
+	z-index: 102;
+}
+
+.site-header {
 
 	@include media($tablet-landscape) {
 		padding: 0 2 * $gutter;
@@ -24,10 +32,13 @@
 }
 
 .site-content {
-	margin: 20px auto;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-left: 270px;
+	position: relative;
 
 	@include media($desktop) {
-		margin: 40px auto 60px;
+		margin: 0 auto 60px;
 	}
 }
 
@@ -39,7 +50,7 @@
 .primary {
 
 	@include media($tablet-landscape) {
-		width: 75%;
+		width: 100%;
 	}
 }
 

@@ -23,6 +23,7 @@ $color-white: #ffffff;
 
 // Grayscale
 $color-gray: #808080;
+$color-river: #454e57;
 $color-cod-gray: #111111;
 $color-mineshaft: #333333;
 $color-dove-gray: #666666;
@@ -72,9 +73,9 @@ $color-border-abbr: $color-dove-gray;
 
 // Accessibility
 $color-background-screen-reader: $color-whitesmoke;
-$color-text-screen-reader: $color-primary;
+$color-text-screen-reader: $color-teal;
 
 // Links
-$color-link: $color-primary;
-$color-link-visited: $color-primary;
-$color-link-hover: $color-primary;
+$color-link: $color-river;
+$color-link-visited: $color-river;
+$color-link-hover: $color-teal;

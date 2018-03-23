@@ -1,9 +1,21 @@
 //--------------------------------------------------------------
 // Header
 //--------------------------------------------------------------
+.site-header {
+
+	.admin-bar & {
+		margin-top: 48px;
+	}
+} // .site-header
 
 .site-title {
 	font-size: 48px;
+	line-height: 1.2;
+
+	a {
+		letter-spacing: 1.4px;
+		text-decoration: none;
+	}
 }
 
 .site-description {
