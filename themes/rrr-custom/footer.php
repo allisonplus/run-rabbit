@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Starter Theme
+ * @package Run Rabbit Run
  */
 
 ?>
@@ -15,11 +15,10 @@
 
 	<footer class="site-footer">
 		<div class="wrap">
-
 			<div class="site-info">
 				<?php rrr_do_copyright_text(); ?>
+				<?php echo rrr_do_build_text(); // WPCS: XSS OK. ?>
 			</div>
-
 		</div><!-- .wrap -->
 	</footer><!-- .site-footer -->
 </div><!-- #page -->
