@@ -36,7 +36,9 @@
 	@include clearfix;
 	@include list-reset;
 
-	margin: $gutter 0 0 12px;
+	@include media($tablet-portrait) {
+		margin: $gutter 0 0 12px;
+	}
 
 	li {
 		display: inline-block;

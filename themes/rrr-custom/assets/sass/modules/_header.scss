@@ -1,16 +1,32 @@
 //--------------------------------------------------------------
 // Header
 //--------------------------------------------------------------
+body {
+	&.admin-bar {
+		padding-top: 28px;
+	}
+}
+
 .site-header {
+	position: relative;
 
 	.admin-bar & {
-		margin-top: 48px;
+		margin-top: 16px;
+
+		@include media($tablet-portrait) {
+			margin-top: 48px;
+		}
 	}
 } // .site-header
 
 .site-title {
-	font-size: 48px;
+	font-size: 38px;
 	line-height: 1.2;
+	margin-bottom: $gutter;
+
+	@include media($tablet-portrait) {
+		font-size: 48px;
+	}
 
 	a {
 		letter-spacing: 1.4px;

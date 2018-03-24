@@ -39,15 +39,25 @@
 				<?php endif; ?>
 			</div><!-- .site-branding -->
 
-			<nav id="site-navigation" class="main-navigation">
-				<?php
-					wp_nav_menu( array(
-						'theme_location' => 'primary',
-						'menu_id'        => 'primary-menu',
-						'menu_class'     => 'menu dropdown menu-vertical'
-					) );
-				?>
-			</nav><!-- #site-navigation -->
+			<button class="sliding-panel-button mobile-menu-toggle" type="button">
+				<span class="mobile-menu-bar line-1"></span>
+				<span class="mobile-menu-bar line-2"></span>
+				<span class="mobile-menu-bar line-3"></span>
+				<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'rrr' ); ?></span>
+			</button>
+
+			<div class="navigation-wrapper sliding-panel-content header-mobile">
+
+				<nav id="site-navigation" class="main-navigation">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'primary',
+							'menu_id'        => 'primary-menu',
+							'menu_class'     => 'menu menu-vertical main-menu',
+						) );
+					?>
+				</nav><!-- #site-navigation -->
+			</div>
 
 			<?php echo rrr_get_social_links(); // WPCS: XSS OK. ?>
 

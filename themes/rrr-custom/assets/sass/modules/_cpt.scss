@@ -4,8 +4,12 @@
 	grid-auto-rows: 170px;
 	grid-gap: $gutter;
 	grid-template-columns: repeat( auto-fit, minmax( 200px, 1fr ) );
-	margin-top: 60px;
+	margin-top: 16px;
 	max-width: 1000px;
+
+	@include media($tablet-landscape) {
+		margin-top: 60px;
+	}
 
 	article {
 		background: $color-river;
@@ -24,7 +28,7 @@
 
 			content: "";
 			position: absolute;
-			transition: background-color 0.25s linear;
+			transition: background-color 0.2s linear;
 		} // &:after
 
 		&:hover {

@@ -57,7 +57,7 @@ a {
 
 		// Sub-menu
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			box-shadow: 0 3px 3px rgba($color-black, 0.2);
 			float: left;
 			left: -999px;
 			position: absolute;
@@ -127,18 +127,15 @@ a {
 	@include size(100% auto);
 
 	clear: both;
-	display: none;
-	// float: left;
 
-	@include media($tablet-landscape) {
+	@include media($tablet-portrait) {
 		display: block;
 	}
 
 	// Menu area
 	ul {
-		display: none;
 
-		@include media($phone-landscape) {
+		@include media($phone-portrait) {
 			display: block;
 		}
 	}

@@ -2,8 +2,11 @@
 // Footer
 //--------------------------------------------------------------
 .site-footer {
-	padding-left: 270px;
 	text-align: center;
+
+	@include media($tablet-landscape) {
+		padding-left: 270px;
+	}
 
 	.dev-info {
 		font-size: 13px;

@@ -16,12 +16,15 @@
 }
 
 .site-header {
-	@include size(270px 100%);
-	@include position(fixed, 0 null null 0);
-
-	background-color: $color-white;
 	box-sizing: border-box;
-	z-index: 102;
+
+	@include media($tablet-landscape) {
+		@include size(270px 100%);
+		@include position(fixed, 0 null null 0);
+
+		background-color: $color-white;
+		z-index: 100;
+	}
 }
 
 .site-header {
@@ -34,11 +37,11 @@
 .site-content {
 	margin: 0 auto;
 	overflow: hidden;
-	padding-left: 270px;
 	position: relative;
 
 	@include media($desktop) {
 		margin: 0 auto 60px;
+		padding-left: 270px;
 	}
 }
 

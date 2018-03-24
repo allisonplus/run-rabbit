@@ -58,22 +58,6 @@ if ( ! function_exists( 'rrr_entry_footer' ) ) :
 							printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'rrr' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
-
-		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
-			comments_popup_link( esc_html__( 'Leave a comment', 'rrr' ), esc_html__( '1 Comment', 'rrr' ), esc_html__( '% Comments', 'rrr' ) );
-			echo '</span>';
-		}
-
-		edit_post_link(
-			sprintf(
-				/* translators: %s: Name of current post */
-				esc_html__( 'Edit %s', 'rrr' ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			),
-			'<span class="edit-link">',
-			'</span>'
-		);
 	}
 endif;
 
@@ -399,30 +383,6 @@ function rrr_do_social_share() {
 }
 
 /**
- * Output the mobile navigation
- */
-function rrr_do_mobile_navigation_menu() {
-
-	// Figure out which menu we're pulling.
-	$mobile_menu = has_nav_menu( 'mobile' ) ? 'mobile' : 'primary';
-?>
-	<nav id="mobile-menu" class="mobile-nav-menu">
-		<button class="close-mobile-menu"><span class="screen-reader-text"><?php _e( 'Close menu', 'rrr' ); ?></span><?php rrr_do_svg( array( 'icon' => 'close' ) ); ?></button>
-		<?php
-			wp_nav_menu( array(
-				'theme_location' => $mobile_menu,
-				'menu_id'        => 'primary-menu',
-				'menu_class'     => 'menu dropdown mobile-nav',
-				'link_before'    => '<span>',
-				'link_after'     => '</span>',
-			) );
-		?>
-	</nav>
-<?php
-}
-
-
-/**
  * Illustration Section
  */
 function rrr_get_illustration_section() {
@@ -438,7 +398,6 @@ function rrr_get_illustration_section() {
 		<?php while ( $illustrations->have_posts() ) : $illustrations->the_post(); ?>
 
 			<article class="post-<?php echo esc_attr( $i ); ?>">
-				<!-- <h2><?php the_title(); ?></h2> -->
 				<?php the_post_thumbnail( 'medium' ); ?>
 			</article>
 
