@@ -427,22 +427,56 @@ function rrr_do_mobile_navigation_menu() {
  */
 function rrr_get_illustration_section() {
 
+	// Set counter increment.
+	$i = 1;
+
 	ob_start(); ?>
 
 		<?php $illustrations = rrr_query_illustrations(); ?>
 
 		<section class="illustration">
-			<div class="illustration-shell wrap">
 		<?php while ( $illustrations->have_posts() ) : $illustrations->the_post(); ?>
 
-			<article>
-				<h2><?php the_title(); ?></h2>
+			<article class="post-<?php echo esc_attr( $i ); ?>">
+				<!-- <h2><?php the_title(); ?></h2> -->
 				<?php the_post_thumbnail( 'medium' ); ?>
 			</article>
 
-		<?php endwhile; ?>
-			</div><!--.illustration-shell-->
+		<?php
+		$i++;
+		endwhile;
+		?>
+		</section><!--.section-->
 
+	<?php
+	return ob_get_clean();
+}
+
+/**
+ * CPT Section
+ */
+function rrr_get_cpt_section() {
+
+	// Set counter increment.
+	$i = 1;
+
+	ob_start(); ?>
+
+		<?php $cpt = rrr_query_cpt(); ?>
+
+		<section class="cpt">
+		<?php while ( $cpt->have_posts() ) : $cpt->the_post(); ?>
+
+			<?php $feat_url = get_the_post_thumbnail_url( get_the_ID(), 'large' ); ?>
+
+			<article class="post-<?php echo esc_attr( $i ); ?>" style="background-image: url( '<?php echo esc_attr( $feat_url ); ?>' )">
+				<h2 class="cpt-title"><?php the_title(); ?></h2>
+			</article>
+
+		<?php
+		$i++;
+		endwhile;
+		?>
 		</section><!--.section-->
 
 	<?php
@@ -452,7 +486,7 @@ function rrr_get_illustration_section() {
 /**
  * Social links for the footer.
  */
-function rrr_get_footer_social_links() {
+function rrr_get_social_links() {
 
 	// Set an array of social networks.
 	$social_networks = array( 'facebook', 'instagram' );

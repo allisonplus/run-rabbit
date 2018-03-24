@@ -7,7 +7,7 @@
 .wrap {
 	margin: 0 auto;
 	max-width: 1400px;
-
+	overflow: hidden;
 	padding: 0 2 * $gutter;
 
 	@include media($desktop) {
@@ -19,7 +19,7 @@
 	@include size(270px 100%);
 	@include position(fixed, 0 null null 0);
 
-	background-color: white;
+	background-color: $color-white;
 	box-sizing: border-box;
 	z-index: 102;
 }

@@ -18,7 +18,6 @@
 			<div class="site-info">
 				<?php rrr_do_copyright_text(); ?>
 				<?php echo rrr_do_build_text(); // WPCS: XSS OK. ?>
-				<?php echo rrr_get_footer_social_links(); // WPCS: XSS OK. ?>
 			</div>
 		</div><!-- .wrap -->
 	</footer><!-- .site-footer -->

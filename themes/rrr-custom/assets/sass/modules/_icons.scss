@@ -36,7 +36,7 @@
 	@include clearfix;
 	@include list-reset;
 
-	margin-top: $gutter;
+	margin: $gutter 0 0 12px;
 
 	li {
 		display: inline-block;
@@ -46,7 +46,7 @@
 		}
 
 		svg {
-			@include size(30px 30px);
+			@include size(20px);
 
 			fill: $color-river;
 		}

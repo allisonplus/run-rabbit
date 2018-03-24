@@ -18,7 +18,7 @@ get_header(); ?>
 		<div class="primary content-area">
 			<main id="main" class="site-main" role="main">
 
-			<?php echo rrr_get_illustration_section(); ?>
+			<?php echo rrr_get_cpt_section(); // WPCS: XSS OK. ?>
 
 			<?php
 			if ( have_posts() ) :

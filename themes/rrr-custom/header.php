@@ -49,6 +49,8 @@
 				?>
 			</nav><!-- #site-navigation -->
 
+			<?php echo rrr_get_social_links(); // WPCS: XSS OK. ?>
+
 		</div><!-- .wrap -->
 	</header><!-- #masthead -->
 
