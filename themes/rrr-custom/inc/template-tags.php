@@ -429,7 +429,7 @@ function rrr_get_cpt_section() {
 			<?php $feat_url = get_the_post_thumbnail_url( get_the_ID(), 'large' ); ?>
 
 			<article class="post-<?php echo esc_attr( $i ); ?>" style="background-image: url( '<?php echo esc_attr( $feat_url ); ?>' )">
-				<h2 class="cpt-title"><?php the_title(); ?></h2>
+				<a class="cpt-link" href="<?php the_permalink(); ?>"><h2 class="cpt-title"><?php the_title(); ?></h2></a>
 			</article>
 
 		<?php
