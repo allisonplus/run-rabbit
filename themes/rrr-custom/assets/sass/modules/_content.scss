@@ -5,7 +5,11 @@
 // Posts and pages
 
 .entry-title {
+	@include position(relative, -16px null null null);
+
+	color: $color-river;
 	font-size: 36px;
+	margin: 0;
 }
 
 .sticky {
@@ -27,9 +31,12 @@
 }
 
 .page-content,
-.entry-content,
 .entry-summary {
 	margin: 24px 0 0;
+}
+
+.entry-content {
+	margin: 0;
 }
 
 .page-links {
@@ -38,7 +45,7 @@
 }
 
 .edit-link {
-	margin: 0 24px;
+	margin: 0 24px 0 0;
 }
 
 // Asides

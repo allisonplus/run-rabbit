@@ -26,11 +26,12 @@
 		&:after {
 			@include size(100%);
 
-			content: "";
+			content: '';
 			position: absolute;
 			transition: background-color 0.2s linear;
 		} // &:after
 
+		// Hover effect.
 		&:hover {
 
 			&:after {
@@ -52,9 +53,17 @@
 			}
 		} // &:hover
 
+		// Title.
 		.cpt-title {
 			display: none;
 			transition: opacity 400ms;
+		}
+
+		// Link to single CPT.
+		.cpt-link {
+			@include position(absolute, 0 0 0 0);
+
+			z-index: 2;
 		}
 	} // article
 } // .cpt

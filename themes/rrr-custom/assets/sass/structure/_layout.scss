@@ -13,6 +13,10 @@
 	@include media($desktop) {
 		padding: 0;
 	}
+
+	.page & {
+		max-width: 1000px;
+	}
 }
 
 .site-header {
@@ -39,7 +43,7 @@
 	overflow: hidden;
 	position: relative;
 
-	@include media($desktop) {
+	@include media($tablet-landscape) {
 		margin: 0 auto 60px;
 		padding-left: 270px;
 	}
