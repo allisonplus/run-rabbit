@@ -383,35 +383,6 @@ function rrr_do_social_share() {
 }
 
 /**
- * Illustration Section
- */
-function rrr_get_illustration_section() {
-
-	// Set counter increment.
-	$i = 1;
-
-	ob_start(); ?>
-
-		<?php $illustrations = rrr_query_illustrations(); ?>
-
-		<section class="illustration">
-		<?php while ( $illustrations->have_posts() ) : $illustrations->the_post(); ?>
-
-			<article class="post-<?php echo esc_attr( $i ); ?>">
-				<?php the_post_thumbnail( 'medium' ); ?>
-			</article>
-
-		<?php
-		$i++;
-		endwhile;
-		?>
-		</section><!--.section-->
-
-	<?php
-	return ob_get_clean();
-}
-
-/**
  * CPT Section
  */
 function rrr_get_cpt_section() {
@@ -421,7 +392,7 @@ function rrr_get_cpt_section() {
 
 	ob_start(); ?>
 
-		<?php $cpt = rrr_query_cpt(); ?>
+		<?php $cpt = rrr_query_front_cpt(); ?>
 
 		<section class="cpt">
 		<?php while ( $cpt->have_posts() ) : $cpt->the_post(); ?>
@@ -429,7 +400,11 @@ function rrr_get_cpt_section() {
 			<?php $feat_url = get_the_post_thumbnail_url( get_the_ID(), 'large' ); ?>
 
 			<article class="post-<?php echo esc_attr( $i ); ?>" style="background-image: url( '<?php echo esc_attr( $feat_url ); ?>' )">
-				<a class="cpt-link" href="<?php the_permalink(); ?>"><h2 class="cpt-title"><?php the_title(); ?></h2></a>
+				<a class="cpt-link" href="<?php the_permalink(); ?>">
+					<figure>
+						<h2 class="cpt-title"><?php the_title(); ?></h2>
+					</figure>
+				</a>
 			</article>
 
 		<?php

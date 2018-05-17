@@ -8,15 +8,14 @@
 /**
  * All CPT Query.
  *
- * @return WP_Query The recent posts.
+ * @return WP_Query Portfolio CPT.
  */
 function rrr_query_cpt() {
-	$puppets = wp_count_posts( 'puppets' )->publish;
-	$illustrations = wp_count_posts( 'illustration' )->publish;
-	$total_posts = intval( $puppets ) + intval( $illustrations );
+	$portfolio = wp_count_posts( 'portfolio' )->publish;
+	$total_posts = intval( $portfolio );
 
 	return new WP_Query( array(
-		'post_type'              => array( 'puppets', 'illustration' ),
+		'post_type'              => 'portfolio',
 		'posts_per_page'         => $total_posts,
 		'no_found_rows'          => true,
 		'update_post_meta_cache' => false,
@@ -25,29 +24,17 @@ function rrr_query_cpt() {
 }
 
 /**
- * Illustrations Query.
+ * Front page CPT Query (limited to 8).
  *
- * @return WP_Query The recent posts.
+ * @return WP_Query Portfolio CPT.
  */
-function rrr_query_illustrations() {
+function rrr_query_front_cpt() {
+	$portfolio = wp_count_posts( 'portfolio' )->publish;
+	$total_posts = intval( $portfolio );
 
 	return new WP_Query( array(
-		'post_type'              => 'illustration',
-		'no_found_rows'          => true,
-		'update_post_meta_cache' => false,
-		'update_post_term_cache' => false,
-	) );
-}
-
-/**
- * Puppets Query.
- *
- * @return WP_Query The recent posts.
- */
-function rrr_query_puppets() {
-
-	return new WP_Query( array(
-		'post_type'              => 'puppets',
+		'post_type'              => 'portfolio',
+		'posts_per_page'         => 8,
 		'no_found_rows'          => true,
 		'update_post_meta_cache' => false,
 		'update_post_term_cache' => false,
