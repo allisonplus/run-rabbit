@@ -111,7 +111,7 @@ rules:
   property-units:
     - 1
     -
-      per-property: { width: ['px', 'rem'], height: ['px', 'rem'], margin: ['px', 'rem'], padding: ['px', 'rem'] }
+      per-property: { width: ['px'], height: ['px'], margin: ['px'], padding: ['px'] }
 
   property-sort-order: 1
   quotes:

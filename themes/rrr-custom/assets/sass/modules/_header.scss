@@ -3,7 +3,10 @@
 //--------------------------------------------------------------
 body {
 	&.admin-bar {
-		padding-top: 28px;
+
+		@include media($tablet-landscape) {
+			padding-top: 28px;
+		}
 	}
 }
 
@@ -13,7 +16,7 @@ body {
 	.admin-bar & {
 		margin-top: 16px;
 
-		@include media($tablet-portrait) {
+		@include media($tablet-landscape) {
 			margin-top: 48px;
 		}
 	}

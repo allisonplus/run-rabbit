@@ -21,7 +21,7 @@
 	}
 
 	.admin-bar & {
-		@include position(absolute, -40px $gutter null null);
+		@include position(absolute, -10px $gutter null null);
 	}
 
 	// Global styles for Hamburger Lines.

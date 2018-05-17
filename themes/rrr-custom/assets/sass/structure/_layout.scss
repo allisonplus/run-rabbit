@@ -14,10 +14,16 @@
 		padding: 0;
 	}
 
+	// Regular pages.
 	.page & {
-		max-width: 1000px;
+		max-width: 1100px;
 	}
-}
+
+	// Front page.
+	.home & {
+		max-width: 1150px;
+	}
+} // .wrap
 
 .site-header {
 	box-sizing: border-box;
@@ -44,7 +50,6 @@
 	position: relative;
 
 	@include media($tablet-landscape) {
-		margin: 0 auto 60px;
 		padding-left: 270px;
 	}
 }
