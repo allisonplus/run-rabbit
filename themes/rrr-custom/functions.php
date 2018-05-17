@@ -43,6 +43,7 @@ function rrr_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+	add_image_size( 'portfolio-archive', 400, 400, array( 'center', 'center' ) );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -97,8 +98,6 @@ function rrr_widgets_init() {
 	// Define sidebars
 	$sidebars = array(
 		'sidebar-1'  => esc_html__( 'Sidebar 1', 'rrr' ),
-	//	'sidebar-2'  => esc_html__( 'Sidebar 2', 'rrr' ),
-	//	'sidebar-3'  => esc_html__( 'Sidebar 3', 'rrr' ),
 	);
 
 	// Loop through each sidebar and register
