@@ -103,3 +103,18 @@ function rrr_portfolio_archive_count( $query ) {
 	}
 }
 add_action( 'pre_get_posts', 'rrr_portfolio_archive_count' );
+
+
+add_filter( 'get_the_archive_title', 'rrr_archive_title_remove_prefix' );
+/**
+ * Remove prefix from CPT archive title.
+ *
+ * @param string $title Title of Archive.
+ */
+function rrr_archive_title_remove_prefix( $title ) {
+	if ( is_post_type_archive() ) {
+		$title = post_type_archive_title( '', false );
+	}
+
+	return $title;
+}
