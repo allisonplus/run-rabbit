@@ -16,8 +16,13 @@ textarea {
 
 h1,
 .h1 {
+	color: $color-river;
 
-}
+	.archive & {
+		line-height: 1;
+		margin-top: 0;
+	}
+} // h1
 
 h2,
 .h2 {
