@@ -17,7 +17,6 @@
 	// Regular pages.
 	.page & {
 		margin-top: $gutter * 2;
-		max-width: 1100px;
 	}
 
 	// Front page.
@@ -26,7 +25,9 @@
 		max-width: 1150px;
 	}
 
-	.archive & {
+	.archive &,
+	.blog &,
+	.page & {
 		max-width: 1100px;
 	}
 } // .wrap

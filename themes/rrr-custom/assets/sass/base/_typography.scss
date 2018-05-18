@@ -26,12 +26,11 @@ textarea {
 // Output headings.
 #{headings(1, 6)} {
 	font-family: $font-serif;
+	color: $color-river;
 } // #{headings(1, 6)}
-
 
 h1,
 .h1 {
-	color: $color-river;
 
 	.archive & {
 		line-height: 1;

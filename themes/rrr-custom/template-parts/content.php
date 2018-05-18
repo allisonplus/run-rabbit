@@ -11,7 +11,6 @@
 
 <article <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 		<?php
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">

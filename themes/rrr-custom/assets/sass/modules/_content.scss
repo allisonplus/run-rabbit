@@ -10,7 +10,11 @@
 	color: $color-river;
 	font-size: 36px;
 	margin: 0;
-}
+
+	.blog & {
+		top: initial;
+	}
+} // entry-title
 
 .sticky {
 	display: block;
