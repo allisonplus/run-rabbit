@@ -90,3 +90,16 @@ function rrr_custom_login() {
 	</style>
 	<?php
 }
+
+/**
+ * Sets number of posts returned for Portfolio Archive.
+ *
+ * @param object $query given WPQuery.
+ */
+function rrr_portfolio_archive_count( $query ) {
+	if ( ! is_admin() && $query->is_main_query() && is_post_type_archive( 'portfolio' ) ) {
+
+		$query->set( 'posts_per_page', '-1' );
+	}
+}
+add_action( 'pre_get_posts', 'rrr_portfolio_archive_count' );
