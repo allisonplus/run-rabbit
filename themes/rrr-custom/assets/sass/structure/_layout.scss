@@ -6,7 +6,7 @@
 
 .wrap {
 	margin: 0 auto;
-	max-width: 1400px;
+	max-width: 1100px;
 	overflow: hidden;
 	padding: 0 2 * $gutter;
 
@@ -23,12 +23,6 @@
 	.home & {
 		margin-top: 0;
 		max-width: 1150px;
-	}
-
-	.archive &,
-	.blog &,
-	.page & {
-		max-width: 1100px;
 	}
 } // .wrap
 
