@@ -12,6 +12,11 @@
 <article <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
+		if ( is_home() && ! is_front_page() ) :
+			the_title( '<h2 class="entry-title">', '</h2>' );
+		endif;
+		?>
+		<?php
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php rrr_posted_on(); ?>
