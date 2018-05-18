@@ -43,7 +43,7 @@ function rrr_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
-	add_image_size( 'portfolio-archive', 400, 400, array( 'center', 'center' ) );
+	add_image_size( 'portfolio-archive', 400, 400, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
