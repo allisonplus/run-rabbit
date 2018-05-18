@@ -12,17 +12,60 @@
 			@include media($tablet-landscape) {
 				max-width: calc((100% / 4) - 20px);
 			}
+
+			a {
+				display: block;
+			}
+
+			&:after {
+				@include size(100%);
+				@include position(absolute, 0 0 0 0);
+
+				content: "";
+				transition: background-color 0.2s linear;
+				z-index: 2;
+			} // &:after
+
+			// Hover effect.
+			&:hover {
+
+				&:after {
+					background-color: rgba($color-turq, 0.7);
+				}
+
+				.cpt-title {
+					@include position(absolute, 50% null null 0);
+
+					box-sizing: border-box;
+					color: $color-white;
+					display: block;
+					margin: 0;
+					padding: 0 20px;
+					text-align: center;
+					transform: translateY(-50%);
+					width: 100%;
+					z-index: 3;
+				}
+			} // &:hover
+
+			// Title.
+			.cpt-title {
+				display: none;
+				transition: opacity 400ms;
+			}
 		}
 	} // .article-wrapper
 
-	.filter-list {
-		display: inline-block;
-		vertical-align: top;
-	}
-
+	// 'Sort by' text.
 	.filter-instruct {
 		display: inline-block;
 		margin-right: $gutter;
+	}
+
+	// List of custom taxonomy/category buttons.
+	.filter-list {
+		display: inline-block;
+		vertical-align: top;
 	}
 } // .archive
 
