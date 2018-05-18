@@ -7,22 +7,21 @@
  * @package Run Rabbit Run
  */
 
+$terms = wp_get_object_terms( $id, 'portfolio_category' );
+
+foreach ( $terms as $term ) {
+	$term_single = 'portfolio_category-' . $term->slug;
+}
+
 ?>
 
-<article <?php post_class(); ?>>
+<article <?php post_class(); ?> data-filter=".<?php echo esc_attr( $term_single ); ?>">
 	<header class="entry-header">
 		<?php
 		if ( has_post_thumbnail() ) {
 		    the_post_thumbnail( 'portfolio-archive' );
 		}
 		?>
-		<?php
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php rrr_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

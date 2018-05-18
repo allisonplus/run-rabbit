@@ -457,3 +457,30 @@ function rrr_get_social_links() {
 	<?php
 	return ob_get_clean();
 }
+
+/**
+ * Returns all possible categories from portfolio custom taxonomy.
+ */
+function rrr_show_tax_list() {
+
+	$term_list = get_terms( array(
+		'taxonomy'   => 'portfolio_category',
+		'hide_empty' => true,
+	) );
+
+	if ( is_wp_error( $term_list ) ) {
+		return false;
+	}
+
+	// Start markup.
+	ob_start(); ?>
+
+	<?php foreach ( $term_list as $term_single ) { ?>
+		<li class="term-single"><button class="filter" data-filter="<?php echo 'portfolio_category-' . esc_html( $term_single->slug ); ?>">
+			<span><?php echo esc_html( $term_single->name ); ?></span>
+		</button></li>
+	<?php } ?>
+
+	<?php
+	return ob_get_clean();
+}

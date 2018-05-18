@@ -19,10 +19,13 @@ get_header(); ?>
 				<header class="page-header">
 					<?php
 						the_archive_title( '<h1 class="page-title">', '</h1>' );
-						the_archive_description( '<div class="taxonomy-description">', '</div>' );
 					?>
 				</header><!-- .page-header -->
 
+
+				<?php get_template_part( 'template-parts/portfolio', 'filter' ); ?>
+
+				<div class="article-wrapper wrap">
 				<?php
 				/* Start the Loop */
 				while ( have_posts() ) : the_post();
@@ -34,7 +37,10 @@ get_header(); ?>
 					 */
 					get_template_part( 'template-parts/content', 'portfolio' );
 
-				endwhile;
+				endwhile; ?>
+
+				</div><!--article-wrapper-->
+				<?php
 
 				the_posts_navigation();
 
