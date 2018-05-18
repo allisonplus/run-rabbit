@@ -12,7 +12,19 @@
 }
 
 // Search widget
-
 .widget_search .search-submit {
 	display: none;
+}
+
+.widget-area {
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+
+	&.footer {
+
+		.widget {
+			width: 100%;
+		}
+	} // &.footer
 }

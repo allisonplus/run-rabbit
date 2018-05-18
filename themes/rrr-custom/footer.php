@@ -15,11 +15,19 @@
 
 	<footer class="site-footer">
 		<div class="wrap">
+
+			<?php
+			if ( ! is_home() && ! is_front_page() ) :
+				get_sidebar();
+			endif;
+			?>
+
 			<div class="site-info">
 				<?php rrr_do_copyright_text(); ?>
 				<?php echo rrr_do_build_text(); // WPCS: XSS OK. ?>
 			</div>
 		</div><!-- .wrap -->
+
 	</footer><!-- .site-footer -->
 </div><!-- #page -->
 
