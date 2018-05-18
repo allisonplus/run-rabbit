@@ -47,13 +47,8 @@ get_header(); ?>
 			</main><!-- #main -->
 		</div><!-- .primary -->
 
-		<?php if ( ! is_active_sidebar( 'sidebar-blog' ) ) {
-			return;
-		}
-		?>
-
 		<aside class="widget-area" role="complementary">
-			<?php dynamic_sidebar( 'sidebar-blog' ); ?>
+			<?php dynamic_sidebar( 'sidebar-2' ); ?>
 		</aside><!-- .secondary -->
 
 	</div><!-- .wrap -->

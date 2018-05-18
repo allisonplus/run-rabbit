@@ -97,8 +97,8 @@ function rrr_widgets_init() {
 
 	// Define sidebars
 	$sidebars = array(
-		'sidebar-1'  => esc_html__( 'Footer Sidebar', 'rrr' ),
-		'sidebar-blog'  => esc_html__( 'Blog Sidebar', 'rrr' ),
+		'sidebar-1' => esc_html__( 'Footer Sidebar', 'rrr' ),
+		'sidebar-2' => esc_html__( 'Blog Sidebar', 'rrr' ),
 	);
 
 	// Loop through each sidebar and register
