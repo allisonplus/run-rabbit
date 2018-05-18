@@ -19,18 +19,18 @@ function rrr_font_url() {
 	 * supported by the following, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$roboto = _x( 'on', 'Roboto font: on or off', 'rrr' );
 	$open_sans = _x( 'on', 'Open Sans font: on or off', 'rrr' );
+	$noto_serif = _x( 'on', 'Noto Serif font: on or off', 'rrr' );
 
-	if ( 'off' !== $roboto || 'off' !== $open_sans ) {
+	if ( 'off' !== $open_sans || 'off' !== $noto_serif ) {
 		$font_families = array();
 
-		if ( 'off' !== $roboto ) {
-			$font_families[] = 'Roboto:400,700';
+		if ( 'off' !== $open_sans ) {
+			$font_families[] = 'Open+Sans:400,600';
 		}
 
-		if ( 'off' !== $open_sans ) {
-			$font_families[] = 'Open Sans:400,300,700';
+		if ( 'off' !== $noto_serif ) {
+			$font_families[] = 'Noto Serif:400,700';
 		}
 
 		$query_args = array(
@@ -39,6 +39,8 @@ function rrr_font_url() {
 
 		$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
 	}
+
+	// <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700|Open+Sans:400,600" rel="stylesheet">
 
 	return $fonts_url;
 }
