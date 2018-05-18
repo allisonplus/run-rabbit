@@ -26,8 +26,7 @@
 				<?php rrr_do_copyright_text(); ?>
 				<?php echo rrr_do_build_text(); // WPCS: XSS OK. ?>
 			</div>
-		</div><!-- .wrap -->
-
+		</div><!--wrap-->
 	</footer><!-- .site-footer -->
 </div><!-- #page -->
 

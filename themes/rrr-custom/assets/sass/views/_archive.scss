@@ -6,16 +6,19 @@
 		display: flex;
 
 		article {
+			@include size(26vw calc(26vw / 1.11));
+
+			clip-path: url(#hexagono);
+			clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
 			font-size: 0;
-			max-width: calc((100% / 2) - 20px);
 
 			@include media($tablet-landscape) {
-				max-width: calc((100% / 4) - 20px);
+				@include size(18vw calc(18vw / 1.11));
 			}
 
 			a {
 				display: block;
-			}
+			} // a
 
 			&:after {
 				@include size(100%);

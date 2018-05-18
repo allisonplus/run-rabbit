@@ -1,0 +1,20 @@
+//--------------------------------------------------------------
+// Blog Landing
+//--------------------------------------------------------------
+.blog {
+	.primary {
+		max-width: 100%;
+
+		@include media($tablet-portrait) {
+			max-width: 70%;
+		}
+	}
+
+	.secondary {
+
+		@include media($tablet-portrait) {
+			margin-left: 5%;
+			max-width: calc(100% / 4);
+		}
+	}
+} // home

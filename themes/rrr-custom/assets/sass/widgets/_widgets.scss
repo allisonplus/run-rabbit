@@ -17,14 +17,22 @@
 }
 
 .widget-area {
-	display: flex;
-	justify-content: space-evenly;
 	width: 100%;
 
 	&.footer {
+		display: flex;
+		justify-content: space-evenly;
 
 		.widget {
 			width: 100%;
 		}
 	} // &.footer
-}
+
+	ul {
+		margin: 0;
+	}
+
+	.widget-title {
+		margin: 0;
+	}
+} // widget-area
