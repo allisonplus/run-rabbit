@@ -18,7 +18,7 @@ jQuery(function ( $ ) {
 		itemSelector: '.type-portfolio',
 		layoutMode: 'fitRows',
 		fitRows: {
-			gutter: '.gutter-sizer'
+			gutter: 12
 		}
 	});
 

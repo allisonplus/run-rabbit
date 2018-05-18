@@ -4,13 +4,26 @@
 .archive {
 	.article-wrapper {
 		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
 
 		article {
-			max-width: calc((100% / 4) - 20px);
+			font-size: 0;
+			max-width: calc((100% / 2) - 20px);
+
+			@include media($tablet-landscape) {
+				max-width: calc((100% / 4) - 20px);
+			}
 		}
 	} // .article-wrapper
+
+	.filter-list {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.filter-instruct {
+		display: inline-block;
+		margin-right: $gutter;
+	}
 } // .archive
 
 
@@ -21,10 +34,8 @@
 	overflow: hidden;
 
 	li {
-		border: 2px solid $color-teal;
 		display: inline-block;
 		float: left;
-		padding: 0 $gutter * 2;
 
 		&:not(:last-of-type) {
 			margin-right: $gutter * 2;
@@ -34,4 +45,11 @@
 			color: $color-teal;
 		}
 	} // li
+
+	button {
+		background-color: transparent;
+		border: 2px solid $color-teal;
+		color: $color-teal;
+		padding: 0 $gutter * 2;
+	}
 } // .portfolio-cat-list
