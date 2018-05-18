@@ -16,10 +16,7 @@ jQuery(function ( $ ) {
 	// Init Isotope.
 	var $grid = $( '.article-wrapper' ).isotope({
 		itemSelector: '.type-portfolio',
-		layoutMode: 'fitRows',
-		fitRows: {
-			gutter: 12
-		}
+		layoutMode: 'fitRows'
 	});
 
 	// Bind filter button click.
