@@ -484,3 +484,46 @@ function rrr_show_tax_list() {
 	<?php
 	return ob_get_clean();
 }
+
+/**
+ * Returns all possible categories' featured image.
+ */
+function rrr_show_cat_img() {
+
+	$term_list = get_terms( array(
+		'taxonomy'   => 'portfolio_category',
+		'hide_empty' => true,
+	) );
+
+	if ( is_wp_error( $term_list ) ) {
+		return false;
+	}
+
+	// Start markup.
+	ob_start(); ?>
+	<div class="cpt">
+
+	<?php foreach ( $term_list as $term_single ) {
+
+		$category_id = $term_single->term_taxonomy_id;
+		$name = $term_single->name;
+		$attachment_id = get_field( 'associated_image', $term_single->taxonomy . '_' . $category_id );
+		$url = $attachment_id['sizes']['large'];
+		$link = get_term_link( $term_single );
+
+		?>
+
+		<article class="post-<?php echo esc_attr( $i ); ?>" style="background-image: url( '<?php echo esc_attr( $url ); ?>' )">
+			<a class="cpt-link" href="<?php echo esc_url( $link ); ?>">
+				<figure>
+					<h2 class="cpt-title"><?php echo esc_html( $name ); ?></h2>
+				</figure>
+			</a>
+		</article>
+
+	<?php } ?>
+	</div>
+
+	<?php
+	return ob_get_clean();
+}
