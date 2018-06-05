@@ -8,7 +8,6 @@
 
 add_action( 'init', 'cptui_register_my_cpts' );
 function cptui_register_my_cpts() {
-
 	/**
 	 * Post Type: Portfolio.
 	 */
@@ -42,40 +41,8 @@ function cptui_register_my_cpts() {
 		'menu_position'       => 5,
 		'menu_icon'           => 'dashicons-schedule',
 		'supports'            => array( 'title', 'editor', 'thumbnail' ),
-		'taxonomies'          => array( 'portfolio_category' ),
+		'taxonomies'          => array( 'portfolio' ),
 	);
 
 	register_post_type( 'portfolio', $args );
 }
-
-function cptui_register_my_taxes() {
-
-	/**
-	 * Taxonomy: Categories.
-	 */
-
-	$labels = array(
-		'name'          => __( 'Categories', 'rrr' ),
-		'singular_name' => __( 'Category', 'rrr' ),
-	);
-
-	$args = array(
-		'label'              => __( 'Categories', 'rrr' ),
-		'labels'             => $labels,
-		'public'             => true,
-		'hierarchical'       => true,
-		'label'              => 'Categories',
-		'show_ui'            => true,
-		'show_in_menu'       => true,
-		'show_in_nav_menus'  => false,
-		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'portfolio_category', 'with_front' => true ),
-		'show_admin_column'  => true,
-		'show_in_rest'       => false,
-		'rest_base'          => 'portfolio_category',
-		'show_in_quick_edit' => false,
-	);
-	register_taxonomy( 'portfolio_category', array( 'portfolio' ), $args );
-}
-
-add_action( 'init', 'cptui_register_my_taxes' );

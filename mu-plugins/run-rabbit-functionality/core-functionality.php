@@ -40,45 +40,34 @@ function cc_mime_types( $mimes ) {
 add_filter( 'upload_mimes', 'cc_mime_types' );
 
 // /**
-// *
 // * Register Custom Taxonomies
 // */
+function cptui_register_my_taxes() {
+	/**
+	 * Taxonomy: Categories.
+	 */
+	$labels = array(
+		'name'          => __( 'Categories', 'rrr' ),
+		'singular_name' => __( 'Category', 'rrr' ),
+	);
 
-//  [To Do]: replace "taxonomy-name-plural" and "taxonomy-name-singular" with desired name" OR remove this code
+	$args = array(
+		'label'              => __( 'Categories', 'rrr' ),
+		'labels'             => $labels,
+		'public'             => true,
+		'hierarchical'       => true,
+		'label'              => 'Categories',
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'show_in_nav_menus'  => false,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'portfolio_category', 'with_front' => true ),
+		'show_admin_column'  => true,
+		'show_in_rest'       => false,
+		'rest_base'          => 'portfolio_category',
+		'show_in_quick_edit' => false,
+	);
+	register_taxonomy( 'portfolio_category', array( 'portfolio' ), $args );
+}
 
-// add_action( 'init', 'cptui_register_my_taxes' );
-// function cptui_register_my_taxes() {
-
-// 	$labels = array(
-// 		'name'                       => 'taxonomy-name-plural',
-// 		'label'                      => 'taxonomy-name-plural',
-// 		'menu_name'                  => 'taxonomy-name-plural',
-// 		'all_items'                  => 'All taxonomy-name-plural',
-// 		'edit_item'                  => 'Edit taxonomy-name-singular',
-// 		'view_item'                  => 'View taxonomy-name-singular',
-// 		'update_item'                => 'Update taxonomy-name-singular Name',
-// 		'add_new_item'               => 'Add New taxonomy-name-singular',
-// 		'new_item_name'              => 'New taxonomy-name-singular Name',
-// 		'parent_item'                => 'Parent taxonomy-name-singular',
-// 		'parent_item_colon'          => 'Parent taxonomy-name-singular:',
-// 		'search_items'               => 'Search taxonomy-name-plural',
-// 		'popular_items'              => 'Popular taxonomy-name-plural',
-// 		'separate_items_with_commas' => 'Separate taxonomy-name-plural with commas',
-// 		'add_or_remove_items'        => 'Add or remove taxonomy-name-plural',
-// 		'choose_from_most_used'      => 'Choose from most used taxonomy-name-plural',
-// 		'not_found'                  => 'No taxonomy-name-plural found',
-// 	);
-
-// 	$args = array(
-// 		'labels'            => $labels,
-// 		'hierarchical'      => true,
-// 		'label'             => 'taxonomy-name-plural',
-// 		'show_ui'           => true,
-// 		'query_var'         => true,
-// 		'rewrite'           => array( 'slug' => 'taxonomy-name-plural', 'with_front' => true ),
-// 		'show_admin_column' => true,
-// 	);
-// 	egister_taxonomy( 'taxonomy-name-plural', array( 'post-type-singular' ), $args );
-
-// 	// End cptui_register_my_taxes.
-// }
+add_action( 'init', 'cptui_register_my_taxes' );
