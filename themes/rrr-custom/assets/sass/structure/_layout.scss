@@ -34,14 +34,8 @@
 		@include position(fixed, 0 null null 0);
 
 		background-color: $color-white;
-		z-index: 100;
-	}
-}
-
-.site-header {
-
-	@include media($tablet-landscape) {
 		padding: 0 2 * $gutter;
+		z-index: 100;
 	}
 }
 

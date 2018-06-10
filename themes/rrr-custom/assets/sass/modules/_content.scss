@@ -52,6 +52,14 @@
 	margin: 0 24px 0 0;
 }
 
+.entry-footer {
+	&:before {
+		border-top: 2px solid black;
+		content: '';
+		display: inline-block;
+	}
+}
+
 // Asides
 
 .blog .format-aside .entry-title,

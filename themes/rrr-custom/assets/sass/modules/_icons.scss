@@ -36,6 +36,8 @@
 	@include clearfix;
 	@include list-reset;
 
+	padding: $gutter;
+
 	@include media($tablet-portrait) {
 		margin: $gutter 0 0 12px;
 	}

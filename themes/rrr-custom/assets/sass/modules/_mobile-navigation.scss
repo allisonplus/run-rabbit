@@ -28,7 +28,7 @@
 	.mobile-menu-bar {
 		@include size(40px 5px);
 
-		background-color: $void;
+		background-color: $color-cod-gray;
 		display: block;
 		margin: 7px auto;
 		transition: all 0.3s ease-in-out;
@@ -87,50 +87,17 @@
 
 
 // //--------------------------------------------------------------
-// // Sub-menu functionality on mobile
-// //--------------------------------------------------------------
-// .navigation-wrapper {
-
-// 	// If link has children...
-// 	.menu-item-has-children {
-
-// 		a {
-// 			display: flex;
-// 			justify-content: space-between;
-// 		} //
-
-// 		> ul {
-// 			display: none;
-
-// 			li {
-// 				margin-right: 0;
-// 			}
-
-// 			a {
-// 				border-bottom: none;
-// 				padding-right: 0;
-
-// 				&:after {
-// 					content: none;
-// 				}
-// 			}
-// 		} // > ul
-// 	} //.menu-item-has-children
-// } // .mobile-navigation-wrapper
-
-
-// //--------------------------------------------------------------
 // // Sliding effect of mobile nav
 // //--------------------------------------------------------------
 .navigation-wrapper {
 
 	// Content of mobile menu.
 	&.sliding-panel-content {
-		// @include position(fixed, 0 0 0 auto);
+		@include position(fixed, 0 0 0 auto);
 		@include size(100%);
 
 		-webkit-overflow-scrolling: touch;
-		// -webkit-transform: translateY(-100%); // fixes on Safari 8
+		-webkit-transform: translateY(-100%); // fixes on Safari 8
 		overflow-y: auto;
 		padding-top: 50px;
 		transform: translateY(-100%);
