@@ -38,10 +38,6 @@
 
 	padding: $gutter;
 
-	@include media($tablet-portrait) {
-		margin: $gutter 0 0 12px;
-	}
-
 	li {
 		display: inline-block;
 

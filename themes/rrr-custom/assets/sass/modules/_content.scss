@@ -16,6 +16,10 @@
 	}
 } // entry-title
 
+.entry-header {
+	margin-bottom: $gutter * 2;
+}
+
 .sticky {
 	display: block;
 }
@@ -53,10 +57,13 @@
 }
 
 .entry-footer {
+	margin-top: $gutter * 2;
+
 	&:before {
-		border-top: 2px solid black;
-		content: '';
-		display: inline-block;
+		border-top: 2px solid $color-turq;
+		content: "";
+		display: block;
+		padding-top: $gutter;
 	}
 }
 
