@@ -164,7 +164,7 @@ function rrr_get_svg( $args = array() ) {
  * @param  array $args  Parameters needed to display an SVG.
  */
 function rrr_do_svg( $args = array() ) {
-	echo rrr_get_svg( $args );
+	echo rrr_get_svg( $args ); // WPCS: XSS OK.
 }
 
 /**
@@ -379,7 +379,7 @@ function rrr_get_social_share() {
  * Echo social sharing icons.
  */
 function rrr_do_social_share() {
-	echo rrr_get_social_share();
+	echo rrr_get_social_share(); // WPCS: XSS OK.
 }
 
 /**

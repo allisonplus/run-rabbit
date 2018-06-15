@@ -16,4 +16,4 @@ define( 'BE_DIR', dirname( __FILE__ ) );
 require_once( BE_DIR . '/run-rabbit-functionality/inc/general.php' ); // General.
 require_once( BE_DIR . '/run-rabbit-functionality/core-functionality.php' ); // General.
 require_once( BE_DIR . '/run-rabbit-functionality/inc/cpt-portfolio.php' ); // CPT Portfolio.
-// require_once( BE_DIR . '/run-rabbit-functionality/advanced-custom-fields-pro/acf.php' ); // Advanced Custom Fields.
+require_once( BE_DIR . '/run-rabbit-functionality/advanced-custom-fields-pro/acf.php' ); // Advanced Custom Fields.

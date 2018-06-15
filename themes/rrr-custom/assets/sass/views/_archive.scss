@@ -94,8 +94,12 @@
 
 	button {
 		background-color: transparent;
-		border: 1px solid $color-teal;
+		border: 2px solid $color-turq;
 		color: $color-teal;
 		padding: 0 $gutter * 2;
+
+		&.is-checked {
+			border: 2px solid $color-pink;
+		}
 	}
 } // .portfolio-cat-list
