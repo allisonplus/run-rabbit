@@ -476,7 +476,7 @@ function rrr_show_tax_list() {
 	ob_start(); ?>
 
 	<?php foreach ( $term_list as $term_single ) { ?>
-		<li class="term-single"><button class="filter" data-filter="<?php echo 'portfolio_category-' . esc_html( $term_single->slug ); ?>">
+		<li class="term-single"><button class="filter" data-filter="<?php echo esc_html( $term_single->slug ); ?>">
 			<span><?php echo esc_html( $term_single->name ); ?></span>
 		</button></li>
 	<?php } ?>
@@ -509,8 +509,7 @@ function rrr_show_cat_img() {
 		$name = $term_single->name;
 		$attachment_id = get_field( 'associated_image', $term_single->taxonomy . '_' . $category_id );
 		$url = $attachment_id['sizes']['large'];
-		$link = get_term_link( $term_single );
-
+		$link = get_home_url() . '/portfolio/#' . strtolower( $name );
 		?>
 
 		<article class="post-<?php echo esc_attr( $i ); ?>" style="background-image: url( '<?php echo esc_attr( $url ); ?>' )">

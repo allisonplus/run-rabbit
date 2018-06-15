@@ -13,54 +13,55 @@
 
 jQuery(function ( $ ) {
 
+	function getHashFilter() {
+		var matches = location.hash.match( /([^#])+/gi );
+		var hashFilter = matches;
+		return hashFilter && decodeURIComponent( hashFilter );
+	}
+
 	// Init Isotope.
-	var $grid = $( '.article-wrapper' ).isotope({
-		itemSelector: '.type-portfolio',
-		layoutMode: 'fitRows'
-	});
+	var $grid = $('.article-wrapper');
 
 	// Bind filter button click.
-	$( '.filter-list' ).on( 'click', 'button', function () {
-		var filterValue = $(this).attr( 'data-filter' );
+	var $filterButtonGroup = $('.filter-list');
+	$filterButtonGroup.on( 'click', 'button', function() {
+	  var filterAttr = $( this ).attr('data-filter');
 
-		if ( filterValue !== '*' ) {
-			filterValue = '.' + filterValue;
-			console.log(filterValue);
-		} else {
-			filterValue;
-		}
-
-		$grid.isotope({ filter: filterValue });
+	  // Set filter in hash.
+	  location.hash = encodeURIComponent( filterAttr );
 	});
 
-	// Change 'is-checked' class on buttons.
-	var group = $( '.button-group' );
-	var filterValue;
-	var $other;
+	var isIsotopeInit = false;
 
-	function findAttr() {
-		group.each( function( i, buttonGroup ) {
+	function onHashchange() {
+	  var hashFilter = getHashFilter();
+	  if ( !hashFilter && isIsotopeInit ) {
+	    return;
+	  }
 
-			var $buttonGroup = $( buttonGroup );
+	  if ( hashFilter ) {
+		var filter = hashFilter !== '*' ? '.portfolio_category-' + hashFilter : '*';
+	  } else {
+	  	var filter = '*';
+	  }
 
-			$buttonGroup.on( 'click', 'button', function () {
-				filterValue = $( this ).attr( 'data-filter' );
-				removeClass();
-				addClass();
-			});
-		});
-	};
+	  isIsotopeInit = true;
 
-	function removeClass() {
-		// Loop over all the buttons, and remove class regardless.
-		$( '.button-group button' ).each(function( i, button ) {
-			$( button ).removeClass( 'is-checked' );
-		});
-	};
+	  // Filter isotope.
+	  $grid.isotope({
+	    itemSelector: '.type-portfolio',
+	    layoutMode: 'fitRows',
+	    filter: filter
+	  });
+	  // Set selected class on button.
+	  if ( hashFilter ) {
+	    $filterButtonGroup.find('.is-checked').removeClass('is-checked');
+	    $filterButtonGroup.find('[data-filter="' + hashFilter + '"]').addClass('is-checked');
+	  }
+	}
 
-	function addClass() {
-		$other = $( "*[data-filter=\"" + filterValue + "\"]" );
-		$other.addClass( 'is-checked' );
-	};
-	findAttr();
+	$(window).on( 'hashchange', onHashchange );
+
+	// Trigger event handler to init Isotope.
+	onHashchange();
 });

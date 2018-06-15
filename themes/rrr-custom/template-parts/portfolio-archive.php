@@ -8,14 +8,14 @@
  */
 
 $terms = wp_get_object_terms( $id, 'portfolio_category' );
-
 foreach ( $terms as $term ) {
-	$term_single = 'portfolio_category-' . $term->slug;
+	$tax = $term->slug;
 }
 
 ?>
 
-<article <?php post_class(); ?> data-filter=".<?php echo esc_attr( $term_single ); ?>">
+<article <?php post_class(); ?> data-filter="<?php echo esc_attr( $tax ); ?>">
+
 	<a href="<?php the_permalink(); ?>">
 		<header class="entry-header">
 			<?php
