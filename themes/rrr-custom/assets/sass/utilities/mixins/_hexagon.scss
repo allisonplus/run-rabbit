@@ -1,0 +1,31 @@
+// --------------------------------------------------------------
+// Hexagon Shape Mixin
+// --------------------------------------------------------------
+@mixin hexagon($size, $color, $rotation) {
+    background-color: $color;
+    height: $size / 1.76;
+    margin: ($size / 4.6) 0;
+    position: relative;
+    transform: rotate($rotation);
+    width: $size;
+
+    &:before,
+    &:after {
+		border-left: $size / 2 solid transparent;
+		border-right: $size / 2 solid transparent;
+		content: "";
+		position: absolute;
+		width: 0;
+    }
+
+    &:before {
+		border-bottom: $size / 3.5 solid $color;
+		bottom: 100%;
+    }
+
+    &:after {
+		border-top: $size / 3.5 solid $color;
+		top: 100%;
+		width: 0;
+    }
+}
