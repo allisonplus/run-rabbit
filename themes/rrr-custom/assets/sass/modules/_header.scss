@@ -32,10 +32,13 @@ body {
 		font-size: 48px;
 	}
 
-	a {
+	a,
+	a:visited {
 		color: $color-cod-gray;
 		letter-spacing: 1.4px;
+		position: relative;
 		text-decoration: none;
+		z-index: 1;
 	}
 }
 
@@ -43,3 +46,43 @@ body {
 	font-size: 24px;
 	margin: 0 0 24px;
 }
+
+// Container around hexagons.
+.hex-container {
+	display: none;
+
+	@include media($tablet-landscape) {
+		@include position(absolute, 20px null null 20%);
+
+		display: block;
+	}
+
+	// General hexagon styles.
+	.hex {
+		opacity: 0.65;
+	}
+
+	// Individual hexagon stylings.
+	.hex-one {
+		@include hexagon(75px, $color-neon, 35deg);
+	}
+
+	.hex-two {
+		@include hexagon(75px, $color-pink, 43deg);
+
+		margin: 42px 0 0 51px;
+	}
+
+	.hex-three {
+		@include hexagon(75px, $color-turq, 20deg);
+
+		margin: 34px 0 0 8px;
+	}
+
+	.hex-four {
+		@include hexagon(75px, $color-yellow, 15deg);
+
+		margin: 60px 0 0 60px;
+	}
+} // .hex-container
+

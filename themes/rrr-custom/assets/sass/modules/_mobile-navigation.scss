@@ -58,6 +58,12 @@
 // //--------------------------------------------------------------
 .navigation-wrapper {
 	background-color: $color-white;
+	position: relative;
+	z-index: 2;
+
+	@include media($tablet-landscape) {
+		background-color: transparent;
+	}
 
 	// Around entire nav + menu.
 	.main-navigation {
@@ -71,14 +77,14 @@
 	.menu-primary-menu-container {
 		padding-top: 25px;
 
-		@include media($tablet-landscape) {
+		@include media($tablet-portrait) {
 			padding-top: 0;
 		}
 
 		.admin-bar & {
 			padding-top: 75px;
 
-			@include media($tablet-landscape) {
+			@include media($tablet-portrait) {
 				padding-top: 0;
 			}
 		}
@@ -102,10 +108,10 @@
 		padding-top: 50px;
 		transform: translateY(-100%);
 		transition: all 0.25s linear;
-		z-index: 1;
+		z-index: 2;
 
 		@include media($tablet-landscape) {
-			@include position(initial, null null null null);
+			@include position(relative, null null null null);
 
 			-webkit-transform: initial; // fixes on Safari 8
 			padding-top: 0;

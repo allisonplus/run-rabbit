@@ -71,11 +71,10 @@
 	padding-top: $gutter;
 
 	&:after {
-		@include size(100% 3px);
+		@include size(98% 1px);
 
 		background-color: $color-turq;
-		// background-image: linear-gradient(45deg, $color-neon 0%, $color-pink 100%);
-		border-radius: 1.5px;
+		border-radius: 1px;
 		content: "";
 		display: block;
 	}

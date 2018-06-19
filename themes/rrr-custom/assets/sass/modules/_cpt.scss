@@ -39,12 +39,19 @@
 			z-index: 2;
 		} // &:after
 
+		$colors: (#00ff40, #fe028d, #00ebc0, #f8d300);
+
+		@for $i from 1 through length($colors) {
+
+			&:nth-of-type(#{$i}):hover {
+				&:after {
+					background-color: rgba(nth($colors, $i), 0.7);
+				}
+			}
+		} // for loop
+
 		// Hover effect.
 		&:hover {
-
-			&:after {
-				background-color: rgba($color-turq, 0.7);
-			}
 
 			.cpt-title {
 				@include position(absolute, 50% null null 0);
@@ -103,4 +110,4 @@
 			max-width: 50%;
 			text-align: center;
 	}
-}
+} // .cpt

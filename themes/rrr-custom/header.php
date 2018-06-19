@@ -37,7 +37,13 @@
 				<?php else : ?>
 					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php endif; ?>
-			</div><!-- .site-branding -->
+				<div class="hex-container">
+					<div class="hex hex-one"></div>
+					<div class="hex hex-two"></div>
+					<div class="hex hex-three"></div>
+					<div class="hex hex-four"></div>
+				</div>
+			</div><!-- .site-branding-->
 
 			<button class="sliding-panel-button mobile-menu-toggle" type="button">
 				<span class="mobile-menu-bar line-1"></span>
