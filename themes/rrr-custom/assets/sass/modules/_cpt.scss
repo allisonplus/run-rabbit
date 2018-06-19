@@ -29,7 +29,8 @@
 			@include size(23vw calc(23vw / 1.11));
 		}
 
-		&:after {
+		&:after,
+		&:before {
 			@include size(100%);
 
 			content: "";

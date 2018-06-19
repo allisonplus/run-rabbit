@@ -7,9 +7,19 @@
 .entry-title {
 	@include position(relative, -16px null null null);
 
-	color: $color-river;
+	color: $color-cod-gray;
 	font-size: 36px;
 	margin: 0;
+
+	&:after {
+		@include size(25% 3px);
+
+		background-color: $color-turq;
+		// background-image: linear-gradient(45deg, $color-neon 0%, $color-pink 100%);
+		border-radius: 1.5px;
+		content: "";
+		display: block;
+	}
 
 	.blog & {
 		top: initial;
@@ -58,12 +68,16 @@
 
 .entry-footer {
 	margin-top: $gutter * 2;
+	padding-top: $gutter;
 
-	&:before {
-		border-top: 2px solid $color-turq;
+	&:after {
+		@include size(100% 3px);
+
+		background-color: $color-turq;
+		// background-image: linear-gradient(45deg, $color-neon 0%, $color-pink 100%);
+		border-radius: 1.5px;
 		content: "";
 		display: block;
-		padding-top: $gutter;
 	}
 }
 
