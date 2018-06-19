@@ -499,6 +499,8 @@ function rrr_show_cat_img() {
 		return false;
 	}
 
+	$i = 0; // set increment.
+
 	// Start markup.
 	ob_start(); ?>
 	<div class="cpt">
@@ -510,6 +512,7 @@ function rrr_show_cat_img() {
 		$attachment_id = get_field( 'associated_image', $term_single->taxonomy . '_' . $category_id );
 		$url = $attachment_id['sizes']['large'];
 		$link = get_home_url() . '/portfolio/#' . strtolower( $name );
+		$i++; // increase increment by one.
 		?>
 
 		<article class="post-<?php echo esc_attr( $i ); ?>" style="background-image: url( '<?php echo esc_attr( $url ); ?>' )">
