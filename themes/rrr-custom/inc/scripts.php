@@ -73,7 +73,7 @@ function rrr_scripts() {
 
 	// Slider.
 	wp_enqueue_style( 'rrr-carousel-style', 'https://unpkg.com/flickity@2/dist/flickity.min.css' );
-	wp_enqueue_script( 'rrr-carousel-js', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array( 'jquery' ) );
+	wp_enqueue_script( 'rrr-carousel-js', 'https://unpkg.com/flickity@2.1.2/dist/flickity.pkgd.min.js', array( 'jquery' ) );
 
 	// Enqueue scripts.
 	wp_enqueue_script( 'rrr-scripts', get_template_directory_uri() . '/assets/js/project' . $suffix . '.js', array( 'jquery' ), $version, true );

@@ -18,10 +18,26 @@ foreach ( $terms as $term ) {
 	<div class="portfolio-single-shell">
 		<div class="portfolio-featured-wrapper">
 			<?php if ( has_post_thumbnail() ) : ?>
-			    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-			        <?php the_post_thumbnail( 'portfolio' ); ?>
-			    </a>
+				<?php
+
+				// Get gallery of images.
+				$images = get_field( 'gallery_images' );
+				$size = 'portfolio';
+
+				if ( $images ) : ?>
+
+				<ul class="image-gallery carousel-main" data-flickity='{"pageDots": false, "prevNextButtons": false }'>
+					<li class="portfolio-gallery-single"><?php the_post_thumbnail( 'portfolio' ); ?></li>
+
+					<?php foreach ( $images as $image ) : ?>
+					<li class="portfolio-gallery-single">
+						<?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
+					</li>
+					<?php endforeach; ?>
+				</ul>
+				<?php endif; ?>
 			<?php endif; ?>
+		<?php echo rrr_get_portfolio_gallery(); // WPCS: XSS OK. ?>
 		</div>
 
 		<div class="entry-content">
@@ -33,9 +49,8 @@ foreach ( $terms as $term ) {
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
 				) );
 			?>
-			<?php echo rrr_get_portfolio_gallery(); // WPCS: XSS OK. ?>
 		</div><!-- .entry-content -->
-	</div>
+	</div><!-- .portfolio-single-shell -->
 
 	<footer class="entry-footer">
 		<?php

@@ -27,13 +27,17 @@ function rrr_get_portfolio_gallery() {
 
 	if ( $images ) : ?>
 
-		<ul class="image-gallery">
-			<?php foreach ( $images as $image ) : ?>
-			<li class="portfolio-gallery-single">
-				<?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
-			</li>
-			<?php endforeach; ?>
-		</ul>
+		<div class="portfolio-nav">
+			<ul class="image-gallery" data-flickity='{"pageDots": false, "asNavFor": ".carousel-main" }'>
+				<li class="portfolio-gallery-single"><?php the_post_thumbnail( 'thumbnail' ); ?></li>
+
+				<?php foreach ( $images as $image ) : ?>
+				<li class="portfolio-gallery-single">
+					<?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
+				</li>
+				<?php endforeach; ?>
+			</ul>
+		</div>
 	<?php endif; ?>
 
 	<?php

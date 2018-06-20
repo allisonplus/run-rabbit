@@ -6,6 +6,7 @@
 	list-style-type: none;
 	margin: 0 0 40px;
 	padding: 0;
+	width: 100%;
 
 	.portfolio-gallery-single {
 		font-size: 0; // ghost-space killah.
@@ -17,7 +18,7 @@
 	} // .portfolio-gallery-single
 
 	.flickity-page-dots .dot {
-		background-color: $color-black;
+		background-color: $color-pink;
 	}
 }
 
@@ -113,3 +114,7 @@
 		}
 	} // .pre-title
 } //.nav-links
+
+.portfolio-nav {
+	min-width: 40%;
+}
