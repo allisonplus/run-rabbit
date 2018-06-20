@@ -12,10 +12,11 @@
 <article <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
-		if ( is_home() && ! is_front_page() ) :
-			the_title( '<h2 class="entry-title">', '</h2>' );
-		endif;
-		?>
+		if ( is_single()  ) {
+			the_title( '<h1 class="entry-title">', '</h1>' );
+		} elseif ( ! is_front_page() ) {
+			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+		} ?>
 		<?php
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">

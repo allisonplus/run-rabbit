@@ -117,4 +117,8 @@
 
 .portfolio-nav {
 	min-width: 40%;
+
+	.portfolio-gallery-single {
+		width: calc(100% / 4);
+	}
 }

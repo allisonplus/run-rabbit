@@ -18,6 +18,8 @@ foreach ( $terms as $term ) {
 	<div class="portfolio-single-shell">
 		<div class="portfolio-featured-wrapper">
 			<?php if ( has_post_thumbnail() ) : ?>
+				<ul class="image-gallery carousel-main">
+					<li class="portfolio-gallery-single"><?php the_post_thumbnail( 'portfolio' ); ?></li>
 				<?php
 
 				// Get gallery of images.
@@ -26,8 +28,6 @@ foreach ( $terms as $term ) {
 
 				if ( $images ) : ?>
 
-				<ul class="image-gallery carousel-main" data-flickity='{"pageDots": false, "prevNextButtons": false }'>
-					<li class="portfolio-gallery-single"><?php the_post_thumbnail( 'portfolio' ); ?></li>
 
 					<?php foreach ( $images as $image ) : ?>
 					<li class="portfolio-gallery-single">

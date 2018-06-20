@@ -28,7 +28,7 @@ function rrr_get_portfolio_gallery() {
 	if ( $images ) : ?>
 
 		<div class="portfolio-nav">
-			<ul class="image-gallery" data-flickity='{"pageDots": false, "asNavFor": ".carousel-main" }'>
+			<ul class="image-gallery">
 				<li class="portfolio-gallery-single"><?php the_post_thumbnail( 'thumbnail' ); ?></li>
 
 				<?php foreach ( $images as $image ) : ?>
