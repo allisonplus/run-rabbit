@@ -17,7 +17,11 @@ foreach ( $terms as $term ) {
 <article <?php post_class(); ?> data-filter=".<?php echo esc_attr( $term_single ); ?>">
 	<div class="portfolio-single-shell">
 		<div class="portfolio-featured-wrapper">
-			<?php echo rrr_get_portfolio_gallery(); // WPCS: XSS OK. ?>
+			<?php if ( has_post_thumbnail() ) : ?>
+			    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+			        <?php the_post_thumbnail( 'portfolio' ); ?>
+			    </a>
+			<?php endif; ?>
 		</div>
 
 		<div class="entry-content">
@@ -29,6 +33,7 @@ foreach ( $terms as $term ) {
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
 				) );
 			?>
+			<?php echo rrr_get_portfolio_gallery(); // WPCS: XSS OK. ?>
 		</div><!-- .entry-content -->
 	</div>
 

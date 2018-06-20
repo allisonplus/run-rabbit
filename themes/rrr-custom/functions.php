@@ -44,6 +44,7 @@ if ( ! function_exists( 'rrr_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'portfolio-archive', 400, 400, true );
+		add_image_size( 'portfolio', 550, false );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(

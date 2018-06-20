@@ -9,7 +9,7 @@
 // add_filter( 'acf/settings/show_admin', '__return_false' );
 
 // Add Options page.
-if( function_exists('acf_add_options_page') ) {
+if ( function_exists( 'acf_add_options_page' ) ) {
 	acf_add_options_page();
 }
 
@@ -23,7 +23,7 @@ function rrr_get_portfolio_gallery() {
 
 	// Get gallery of images.
 	$images = get_field( 'gallery_images' );
-	$size = 'portfolio-archive';
+	$size = 'thumbnail';
 
 	if ( $images ) : ?>
 
