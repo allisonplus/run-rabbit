@@ -18,3 +18,37 @@
 		}
 	}
 } // home
+
+.blog {
+
+	.post {
+		.entry-header {
+			&:after {
+				@include size(10% 3px);
+
+				background-color: $color-turq;
+				border-radius: 1.5px;
+				content: "";
+				display: block;
+				margin-top: $gutter;
+			}
+		}
+
+		.entry-footer {
+			margin-top: $gutter * 2;
+		}
+	}
+
+	// Category + tags
+	.tags-links {
+		display: block;
+	}
+
+	// Pagination links.
+	.nav-links {
+		.nav-next a:after,
+		.nav-previous a:before {
+			vertical-align: bottom;
+		}
+	}
+}

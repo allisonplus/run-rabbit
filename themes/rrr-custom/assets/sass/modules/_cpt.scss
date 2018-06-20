@@ -53,6 +53,14 @@
 		// Hover effect.
 		&:hover {
 
+			&:nth-of-type(odd) {
+				transform: rotate(-2deg);
+			}
+
+			&:nth-of-type(even) {
+				transform: rotate(4deg);
+			}
+
 			.cpt-title {
 				@include position(absolute, 50% null null 0);
 

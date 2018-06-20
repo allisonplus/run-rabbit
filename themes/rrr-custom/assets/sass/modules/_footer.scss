@@ -2,6 +2,10 @@
 // Footer
 //--------------------------------------------------------------
 .site-footer {
+	border-radius: 1px;
+	border-top: 1px solid $color-turq;
+	margin: $gutter $gutter * 2;
+	padding-top: $gutter;
 	text-align: center;
 
 	@include media($tablet-landscape) {
