@@ -115,10 +115,17 @@
 	} // .pre-title
 } //.nav-links
 
+.portfolio-single-shell {
+	.entry-content {
+		flex-grow: 1;
+	}
+}
+
 .portfolio-nav {
 	min-width: 40%;
 
 	.portfolio-gallery-single {
-		width: calc(100% / 4);
+		margin-right: $gutter * 2;
+		width: calc(25% - ($gutter * 2));
 	}
 }

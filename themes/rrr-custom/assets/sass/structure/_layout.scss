@@ -5,18 +5,13 @@
 // Structure
 
 .wrap {
-	margin: 0 auto;
+	margin: $gutter * 2 auto;
 	max-width: 1100px;
 	overflow: hidden;
 	padding: 0 2 * $gutter;
 
 	@include media($desktop) {
 		padding: 0;
-	}
-
-	// Regular pages.
-	.page & {
-		margin-top: $gutter * 2;
 	}
 
 	// Front page.

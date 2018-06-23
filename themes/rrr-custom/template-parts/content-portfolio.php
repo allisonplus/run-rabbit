@@ -28,7 +28,6 @@ foreach ( $terms as $term ) {
 
 				if ( $images ) : ?>
 
-
 					<?php foreach ( $images as $image ) : ?>
 					<li class="portfolio-gallery-single">
 						<?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
@@ -37,7 +36,6 @@ foreach ( $terms as $term ) {
 				</ul>
 				<?php endif; ?>
 			<?php endif; ?>
-		<?php echo rrr_get_portfolio_gallery(); // WPCS: XSS OK. ?>
 		</div>
 
 		<div class="entry-content">
@@ -49,6 +47,7 @@ foreach ( $terms as $term ) {
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
 				) );
 			?>
+			<?php echo rrr_get_portfolio_gallery(); // WPCS: XSS OK. ?>
 		</div><!-- .entry-content -->
 	</div><!-- .portfolio-single-shell -->
 
