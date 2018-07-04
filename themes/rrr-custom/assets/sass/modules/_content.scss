@@ -34,7 +34,8 @@
 		}
 	}
 
-	.blog & {
+	.blog &,
+	.group-blog {
 		top: initial;
 	}
 } // entry-title

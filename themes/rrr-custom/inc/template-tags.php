@@ -428,7 +428,7 @@ function rrr_get_social_links() {
 	<?php // If there's no email, don't make this <li> in the first place .?>
 	<?php if ( ! empty( $email ) ) : ?>
 		<li class="social-network email">
-			<a href="mailto:<?php echo esc_attr( $email ); ?>">
+			<a href="mailto:<?php echo esc_attr( $email ); ?>" aria-label="Email Me">
 				<?php echo rrr_get_svg( array( 'icon' => 'email-square', '' ) ); // WPCS: XSS OK. ?>
 			</a>
 		</li>
@@ -441,7 +441,7 @@ function rrr_get_social_links() {
 
 		<?php if ( ! empty( $link_value ) ) : ?>
 			<li class="social-network <?php echo $network; // WPCS: XSS OK. ?>">
-				<a href="<?php echo esc_url( get_theme_mod( 'rrr_' . $network . '_link' ) ); ?>">
+				<a href="<?php echo esc_url( get_theme_mod( 'rrr_' . $network . '_link' ) ); ?>" aria-label="Follow me on <?php echo esc_attr( $network ); ?> ">
 					<?php echo rrr_get_svg( array( 'icon' => $network . '-square', 'title' => $network . '' ) ); // WPCS: XSS OK. ?>
 				</a>
 			</li>
@@ -498,7 +498,7 @@ function rrr_show_cat_img() {
 
 	// Start markup.
 	ob_start(); ?>
-	<div class="cpt">
+	<div class="cpt" tabindex=-1>
 
 	<?php foreach ( $term_list as $term_single ) {
 
@@ -510,8 +510,8 @@ function rrr_show_cat_img() {
 		$i++; // increase increment by one.
 		?>
 
-		<article class="post-<?php echo esc_attr( $i ); ?>" style="background-image: url( '<?php echo esc_attr( $url ); ?>' )">
-			<a class="cpt-link" href="<?php echo esc_url( $link ); ?>">
+		<article tabindex=0 class="cpt-post post-<?php echo esc_attr( $i ); ?>" style="background-image: url( '<?php echo esc_attr( $url ); ?>' )">
+			<a class="cpt-link" href="<?php echo esc_url( $link ); ?>" arialabel="<?php echo esc_html( $name ); ?>">
 				<figure>
 					<h2 class="cpt-title"><?php echo esc_html( $name ); ?></h2>
 				</figure>

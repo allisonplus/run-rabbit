@@ -48,6 +48,6 @@
 	}
 
 	.heart {
-		color: $color-pink;
+		color: darken($color-pink, 8%);
 	}
 } // .site-footer
