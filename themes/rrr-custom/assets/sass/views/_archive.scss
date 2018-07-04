@@ -136,3 +136,52 @@
 		}
 	}
 } // .portfolio-cat-list
+
+// Coming Soon Portfolio Placeholder section.
+.coming-soon {
+	position: relative;
+
+	h2 {
+		@include position(absolute, 50% 50% null null);
+
+		color: $color-cod-gray;
+		font-size: 25px;
+		line-height: 1;
+		margin: 0;
+		transform: translate(50%, -50%);
+		z-index: 1;
+
+		@include media($tablet-landscape) {
+			font-size: 42px;
+		}
+	}
+
+	.hex-container {
+		@include position(absolute, null null null 40%);
+
+		transform: rotate(38deg);
+	}
+
+	// Individual hexagon stylings.
+	.hex-one {
+		@include hexagon(125px, $color-neon, -22deg);
+	}
+
+	.hex-two {
+		@include hexagon(125px, $color-pink, -43deg);
+
+		margin: 22px 0 0 51px;
+	}
+
+	.hex-three {
+		@include hexagon(125px, $color-turq, -20deg);
+
+		margin: 34px 0 0 8px;
+	}
+
+	.hex-four {
+		@include hexagon(125px, $color-yellow, -15deg);
+
+		margin: 42px 0 0 50px;
+	}
+}
