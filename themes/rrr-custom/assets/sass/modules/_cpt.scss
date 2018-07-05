@@ -1,32 +1,35 @@
 .cpt {
 	display: grid;
-	grid-gap: $gutter;
-	grid-template-columns: repeat(2, 1fr);
-	margin: calc(23vw * 0.6) 0 0;
-	max-width: 1150px;
-	width: calc(23vw * 3);
+	grid-gap: 5px;
+	grid-template-columns: repeat(1, 300px);
+	grid-template-rows: repeat(1, 1fr);
 
-	@include media($tablet-portrait) {
-		grid-template-columns: repeat(4, 1fr);
+	@include media($phone-landscape) {
+		grid-template-columns: repeat(2, 300px);
+		grid-template-rows: repeat(2, 1fr);
+	}
+
+	@include media($tablet-landscape) {
+		grid-gap: 5px;
+		grid-template-columns: repeat(2, unquote("[odd-start] 75px [even-end] 75px [odd-mid] 75px [even-start] 75px [odd-end] 75px [even-mid] 75px"));
+		grid-template-rows: repeat(2, unquote("[even-start even-end] 125px [odd-start odd-end] 125px"));
+		margin: 5% auto 0;
+		width: 75vw;
 	}
 
 	article {
-		@include size(48vw calc(48vw / 1.11));
+		@include size(300px 260px);
 
 		background-color: $color-river;
 		background-position: center;
 		background-size: cover;
 		box-shadow: 0 1px 1px 0 rgba($color-river, 0.4);
 		box-sizing: border-box;
-		clip-path: url(#hexagono);
-		clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
-		color: $color-white;
-		margin-right: calc(23vw / 2);
-		overflow: hidden;
-		position: relative;
+		clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
+		font-size: 25px;
 
-		@include media($tablet-portrait) {
-			@include size(23vw calc(23vw / 1.11));
+		@include media($tablet-landscape) {
+			grid-area: span 2 / span 4;
 		}
 
 		&:after,
@@ -94,30 +97,43 @@
 
 
 .cpt {
+	article:nth-child(1) {
+		// grid-column-start: odd-start 0;
+		// grid-row-start: odd-start 0;
 
-	article:nth-child(2n) {
-		margin: calc(23vw * -0.5) calc(23vw * -0.25) 0 calc(23vw * -0.75);
+		@include media($tablet-landscape) {
+			grid-column-start: odd-start 1;
+			grid-row-start: odd-start 1;
+		}
 	}
 
-	article::before {
-		@include size(25% 100%);
+	article:nth-child(2) {
+		// grid-column-start: even-start 1;
+		// grid-row-start: even-start 1;
 
-		clip-path: polygon(0% 0%, 100% 0%, 0% 50%, 100% 100%, 0% 100%);
-		content: "";
-		float: left;
-		shape-outside: polygon(0% 0%, 100% 0%, 0% 50%, 100% 100%, 0% 100%);
+		@include media($tablet-landscape) {
+			grid-column-start: even-start 1;
+			grid-row-start: even-start 1;
+		}
 	}
 
-	figure {
-			color: $color-white;
-			display: flex;
-			flex-direction: column;
-			flex-wrap: nowrap;
-			font-size: calc(9 / 4 * 1vw);
-			height: 100%;
-			justify-content: center;
-			line-height: 1;
-			max-width: 50%;
-			text-align: center;
+	article:nth-child(3) {
+		// grid-column-start: odd-start 2;
+		// grid-row-start: odd-start 2;
+
+		@include media($tablet-landscape) {
+			grid-column-start: odd-start 2;
+			grid-row-start: odd-start 1;
+		}
+	}
+
+	article:nth-child(4) {
+		// grid-column-start: even-start 1;
+		// grid-row-start: even-start 0;
+
+		@include media($tablet-landscape) {
+			grid-column-start: even-start 2;
+			grid-row-start: even-start 1;
+		}
 	}
 } // .cpt

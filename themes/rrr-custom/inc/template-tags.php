@@ -396,9 +396,7 @@ function rrr_get_cpt_section() {
 
 			<article class="post-<?php echo esc_attr( $i ); ?>" style="background-image: url( '<?php echo esc_attr( $feat_url ); ?>' )">
 				<a class="cpt-link" href="<?php the_permalink(); ?>">
-					<figure>
-						<h2 class="cpt-title"><?php the_title(); ?></h2>
-					</figure>
+					<h2 class="cpt-title"><?php the_title(); ?></h2>
 				</a>
 			</article>
 
