@@ -11,8 +11,12 @@
 	font-size: 36px;
 	margin: 0;
 
+	&.cpt-title {
+		font-size: 26px;
+	}
 
 	.single-portfolio & {
+
 		&:after {
 			@include size(25% 3px);
 
