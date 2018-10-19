@@ -28,10 +28,6 @@ body {
 	line-height: 1.2;
 	margin-bottom: $gutter;
 
-	@include media($tablet-portrait) {
-		font-size: 48px;
-	}
-
 	a,
 	a:visited {
 		color: $color-cod-gray;
