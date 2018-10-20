@@ -7,7 +7,6 @@
 .wrap {
 	margin: $gutter * 2 auto;
 	max-width: 1100px;
-	overflow: hidden;
 	padding: 0 2 * $gutter;
 
 	@include media($desktop) {

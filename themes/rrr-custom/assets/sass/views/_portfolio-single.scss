@@ -2,9 +2,15 @@
 // Portfolio Single
 //--------------------------------------------------------------
 
+.single-portfolio {
+	.primary {
+		float: none;
+	}
+}
+
 .image-gallery {
 	list-style-type: none;
-	margin: 0 0 40px;
+	margin: 0 0 30px;
 	padding: 0;
 	width: 100%;
 
@@ -26,7 +32,7 @@
 	display: flex;
 	flex-direction: column;
 
-	@include media($tablet-landscape) {
+	@include media($tablet-portrait) {
 		flex-direction: row;
 	}
 }
@@ -118,6 +124,14 @@
 .portfolio-single-shell {
 	.entry-content {
 		flex-grow: 1;
+
+		@include media($tablet-portrait) {
+			margin-left: $gutter * 2;
+		}
+
+		@include media($tablet-landscape) {
+			margin-left: 0;
+		}
 	}
 }
 

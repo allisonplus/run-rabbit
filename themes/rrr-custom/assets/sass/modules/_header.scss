@@ -24,7 +24,7 @@ body {
 
 .site-title {
 	font-family: $font-serif;
-	font-size: 38px;
+	font-size: 30px;
 	line-height: 1.2;
 	margin-bottom: $gutter;
 
@@ -48,7 +48,7 @@ body {
 	display: none;
 
 	@include media($tablet-landscape) {
-		@include position(absolute, 20px null null 20%);
+		@include position(absolute, 50px null null 20%);
 
 		display: block;
 	}
